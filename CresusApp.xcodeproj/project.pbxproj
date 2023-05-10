@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2E95D02A0C3050007952A8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */; };
 		BD4348A32A0C280700D77377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4348A22A0C280700D77377 /* AppDelegate.swift */; };
 		BD4348A52A0C280700D77377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4348A42A0C280700D77377 /* SceneDelegate.swift */; };
 		BD4348A72A0C280700D77377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4348A62A0C280700D77377 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BD43489F2A0C280700D77377 /* CresusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CresusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4348A22A0C280700D77377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD4348A42A0C280700D77377 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				BD4348A22A0C280700D77377 /* AppDelegate.swift */,
 				BD4348A42A0C280700D77377 /* SceneDelegate.swift */,
 				BD4348A62A0C280700D77377 /* ViewController.swift */,
+				BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */,
 				BD4348A82A0C280700D77377 /* Main.storyboard */,
 				BD4348AB2A0C280900D77377 /* Assets.xcassets */,
 				BD4348AD2A0C280900D77377 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				BD4348A72A0C280700D77377 /* ViewController.swift in Sources */,
 				BD4348A32A0C280700D77377 /* AppDelegate.swift in Sources */,
 				BD4348A52A0C280700D77377 /* SceneDelegate.swift in Sources */,
+				BD2E95D02A0C3050007952A8 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
