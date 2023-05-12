@@ -15,6 +15,8 @@ class SettingsViewController: UIViewController {
         backgroundImageView.contentMode = .scaleToFill
     }
 
-  
 
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

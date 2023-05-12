@@ -14,10 +14,13 @@ class DailyViewController: UIViewController {
         let backImage = UIImage(named: "mainBackImage")
         backgroundImageView.image = backImage
         backgroundImageView.contentMode = .scaleToFill
-        
+       
        
     }
     
 
-
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
