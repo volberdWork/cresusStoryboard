@@ -15,6 +15,11 @@
 		BD4348AA2A0C280700D77377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4348A82A0C280700D77377 /* Main.storyboard */; };
 		BD4348AC2A0C280900D77377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4348AB2A0C280900D77377 /* Assets.xcassets */; };
 		BD4348AF2A0C280900D77377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4348AD2A0C280900D77377 /* LaunchScreen.storyboard */; };
+		BDA3B8602A0E3001002A1094 /* JockeyOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA3B85F2A0E3001002A1094 /* JockeyOne-Regular.ttf */; };
+		BDA3B8672A0E36DA002A1094 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B8662A0E36DA002A1094 /* Constants.swift */; };
+		BDA3B8692A0E3FB4002A1094 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B8682A0E3FB4002A1094 /* MainViewController.swift */; };
+		BDA3B86B2A0E5A14002A1094 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B86A2A0E5A14002A1094 /* SettingsViewController.swift */; };
+		BDA3B86D2A0E7081002A1094 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		BD4348AB2A0C280900D77377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD4348AE2A0C280900D77377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD4348B02A0C280900D77377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDA3B85F2A0E3001002A1094 /* JockeyOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JockeyOne-Regular.ttf"; sourceTree = "<group>"; };
+		BDA3B8662A0E36DA002A1094 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BDA3B8682A0E3FB4002A1094 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BDA3B86A2A0E5A14002A1094 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 		BD2E95D22A0CF14A007952A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD4348A82A0C280700D77377 /* Main.storyboard */,
 				BD2E95D42A0CF746007952A8 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -60,7 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				BD4348A62A0C280700D77377 /* PreloaderViewController.swift */,
+				BDA3B86A2A0E5A14002A1094 /* SettingsViewController.swift */,
+				BDA3B8682A0E3FB4002A1094 /* MainViewController.swift */,
 				BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */,
+				BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -84,17 +98,50 @@
 		BD4348A12A0C280700D77377 /* CresusApp */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3B8632A0E33D2002A1094 /* Application */,
+				BDA3B8612A0E30F1002A1094 /* Helpers */,
 				BD2E95D32A0CF151007952A8 /* Controllers */,
 				BD2E95D22A0CF14A007952A8 /* Views */,
 				BD2E95D12A0CF143007952A8 /* Models */,
-				BD4348A22A0C280700D77377 /* AppDelegate.swift */,
-				BD4348A42A0C280700D77377 /* SceneDelegate.swift */,
-				BD4348A82A0C280700D77377 /* Main.storyboard */,
 				BD4348AB2A0C280900D77377 /* Assets.xcassets */,
 				BD4348AD2A0C280900D77377 /* LaunchScreen.storyboard */,
 				BD4348B02A0C280900D77377 /* Info.plist */,
+				BDA3B8642A0E3401002A1094 /* Resources */,
 			);
 			path = CresusApp;
+			sourceTree = "<group>";
+		};
+		BDA3B8612A0E30F1002A1094 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3B8622A0E30F9002A1094 /* Fonts */,
+				BDA3B8662A0E36DA002A1094 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BDA3B8622A0E30F9002A1094 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3B85F2A0E3001002A1094 /* JockeyOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BDA3B8632A0E33D2002A1094 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BD4348A22A0C280700D77377 /* AppDelegate.swift */,
+				BD4348A42A0C280700D77377 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BDA3B8642A0E3401002A1094 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +205,7 @@
 				BD4348AF2A0C280900D77377 /* LaunchScreen.storyboard in Resources */,
 				BD4348AC2A0C280900D77377 /* Assets.xcassets in Resources */,
 				BD4348AA2A0C280700D77377 /* Main.storyboard in Resources */,
+				BDA3B8602A0E3001002A1094 /* JockeyOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,11 +216,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA3B8692A0E3FB4002A1094 /* MainViewController.swift in Sources */,
 				BD4348A72A0C280700D77377 /* PreloaderViewController.swift in Sources */,
+				BDA3B86D2A0E7081002A1094 /* DailyViewController.swift in Sources */,
 				BD4348A32A0C280700D77377 /* AppDelegate.swift in Sources */,
 				BD2E95D52A0CF746007952A8 /* OnboardingCollectionViewCell.swift in Sources */,
 				BD4348A52A0C280700D77377 /* SceneDelegate.swift in Sources */,
 				BD2E95D02A0C3050007952A8 /* OnboardingViewController.swift in Sources */,
+				BDA3B8672A0E36DA002A1094 /* Constants.swift in Sources */,
+				BDA3B86B2A0E5A14002A1094 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,6 +3,7 @@ import UIKit
 class PreloaderViewController: UIViewController {
     @IBOutlet var backgroundImageView: UIImageView!
     
+    @IBOutlet var label: UILabel!
     @IBOutlet var logoImageViewv: UIImageView!
     @IBOutlet var thirdLoadImageView: UIImageView!
     @IBOutlet var secondLoadImageView: UIImageView!
@@ -10,7 +11,7 @@ class PreloaderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         configureView()
         loadinImages()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.9) { // Открываем второй контроллер через 1.5 секунды
