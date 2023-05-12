@@ -26,4 +26,6 @@ class LocationCollectionViewCell: UICollectionViewCell {
 struct LocationModel{
     var locationTitle: String
     var locationImage: String
+    var overview: String
+    var personImage: String
 }

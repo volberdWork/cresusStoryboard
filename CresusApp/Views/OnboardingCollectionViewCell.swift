@@ -1,10 +1,3 @@
-//
-//  OnboardingCollectionViewCell.swift
-//  CresusApp
-//
-//  Created by newAccount on 11.05.2023.
-//
-
 import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell {

@@ -3,7 +3,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet var backgroundImageView: UIImageView!
-//    @IBOutlet var dailyImageView: UIImageView!
+    //    @IBOutlet var dailyImageView: UIImageView!
     @IBOutlet var locationImageView: UIImageView!
     
     @IBOutlet var collectionView: UICollectionView!
@@ -19,13 +19,34 @@ class MainViewController: UIViewController {
         collectionView.backgroundColor = .clear
         
         gameBase = [
-            LocationModel(locationTitle: "Zeus Garden", locationImage: "zeusImage"),
-            LocationModel(locationTitle: "The Golden Fleece", locationImage: "goldenImage"),
-            LocationModel(locationTitle: "Olympus Quest", locationImage: "olympusImage"),
-            LocationModel(locationTitle: "Hades' Inferno", locationImage: "hadesImage"),
-            LocationModel(locationTitle: "Odyssey of the Gods", locationImage: "odyseyImage"),
-            LocationModel(locationTitle: "Mino's Labyrinth", locationImage: "minosImage"),
-            LocationModel(locationTitle: "Sphinx's Riddle", locationImage: "sphynxImage")
+            LocationModel(locationTitle: "Zeus Garden",
+                          locationImage: "zeusImage",
+                          overview: "Find all elements and get keys in time to win this adventure. Good luck!",
+                          personImage: ""),
+            LocationModel(locationTitle: "The Golden Fleece",
+                          locationImage: "goldenImage",
+                          overview: "Find all elements and get keys in time to win this adventure. Good luck!",
+                          personImage: ""),
+            LocationModel(locationTitle: "Olympus Quest",
+                          locationImage: "olympusImage",
+                          overview: "Find all elements and get keys in time to win this adventure. Good luck!",
+                          personImage: ""),
+            LocationModel(locationTitle: "Hades' Inferno",
+                          locationImage: "hadesImage",
+                          overview: "Find all elements and get keys in time to win this adventure. Good luck!",
+                          personImage: ""),
+            LocationModel(locationTitle: "Odyssey of the Gods",
+                          locationImage: "odyseyImage",
+                          overview: "Find all elements and get keys in time to win this adventure. Good luck!",
+                          personImage: ""),
+            LocationModel(locationTitle: "Mino's Labyrinth",
+                          locationImage: "minosImage",
+                          overview: "Find all elements and get keys in time to win this adventure. Good luck!",
+                          personImage: ""),
+            LocationModel(locationTitle: "Sphinx's Riddle",
+                          locationImage: "sphynxImage",
+                          overview: "Find all elements and get keys in time to win this adventure. Good luck!",
+                          personImage: "")
         ]
     }
     
@@ -47,10 +68,23 @@ class MainViewController: UIViewController {
         
     }
     
+    func openDetailController(model: LocationModel) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            navigationController?.pushViewController(vc, animated: true)
+            vc.detailGameInfo.append(model)
+        }
+    }
+    
 }
 
 extension MainViewController: UICollectionViewDelegate{
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        openDetailController(model: gameBase[indexPath.row])
+        
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource{
