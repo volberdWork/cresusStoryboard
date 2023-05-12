@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BD2E95D02A0C3050007952A8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */; };
+		BD2E95D52A0CF746007952A8 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E95D42A0CF746007952A8 /* OnboardingCollectionViewCell.swift */; };
 		BD4348A32A0C280700D77377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4348A22A0C280700D77377 /* AppDelegate.swift */; };
 		BD4348A52A0C280700D77377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4348A42A0C280700D77377 /* SceneDelegate.swift */; };
-		BD4348A72A0C280700D77377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4348A62A0C280700D77377 /* ViewController.swift */; };
+		BD4348A72A0C280700D77377 /* PreloaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4348A62A0C280700D77377 /* PreloaderViewController.swift */; };
 		BD4348AA2A0C280700D77377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4348A82A0C280700D77377 /* Main.storyboard */; };
 		BD4348AC2A0C280900D77377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4348AB2A0C280900D77377 /* Assets.xcassets */; };
 		BD4348AF2A0C280900D77377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4348AD2A0C280900D77377 /* LaunchScreen.storyboard */; };
@@ -18,10 +19,11 @@
 
 /* Begin PBXFileReference section */
 		BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		BD2E95D42A0CF746007952A8 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD43489F2A0C280700D77377 /* CresusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CresusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4348A22A0C280700D77377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD4348A42A0C280700D77377 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD4348A62A0C280700D77377 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD4348A62A0C280700D77377 /* PreloaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderViewController.swift; sourceTree = "<group>"; };
 		BD4348A92A0C280700D77377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD4348AB2A0C280900D77377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD4348AE2A0C280900D77377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD2E95D12A0CF143007952A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD2E95D22A0CF14A007952A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD2E95D42A0CF746007952A8 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD2E95D32A0CF151007952A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD4348A62A0C280700D77377 /* PreloaderViewController.swift */,
+				BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BD4348962A0C280700D77377 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +84,11 @@
 		BD4348A12A0C280700D77377 /* CresusApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD2E95D32A0CF151007952A8 /* Controllers */,
+				BD2E95D22A0CF14A007952A8 /* Views */,
+				BD2E95D12A0CF143007952A8 /* Models */,
 				BD4348A22A0C280700D77377 /* AppDelegate.swift */,
 				BD4348A42A0C280700D77377 /* SceneDelegate.swift */,
-				BD4348A62A0C280700D77377 /* ViewController.swift */,
-				BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */,
 				BD4348A82A0C280700D77377 /* Main.storyboard */,
 				BD4348AB2A0C280900D77377 /* Assets.xcassets */,
 				BD4348AD2A0C280900D77377 /* LaunchScreen.storyboard */,
@@ -141,8 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4348A72A0C280700D77377 /* ViewController.swift in Sources */,
+				BD4348A72A0C280700D77377 /* PreloaderViewController.swift in Sources */,
 				BD4348A32A0C280700D77377 /* AppDelegate.swift in Sources */,
+				BD2E95D52A0CF746007952A8 /* OnboardingCollectionViewCell.swift in Sources */,
 				BD4348A52A0C280700D77377 /* SceneDelegate.swift in Sources */,
 				BD2E95D02A0C3050007952A8 /* OnboardingViewController.swift in Sources */,
 			);

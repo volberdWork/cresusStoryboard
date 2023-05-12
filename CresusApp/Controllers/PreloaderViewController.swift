@@ -8,12 +8,23 @@ class PreloaderViewController: UIViewController {
     @IBOutlet var secondLoadImageView: UIImageView!
     @IBOutlet var firstLoadImageView: UIImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureView()
-        
+        loadinImages()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.9) { // Открываем второй контроллер через 1.5 секунды
+            self.openSecondController()
+        }
+    }
+    
+    private func openSecondController() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let onboardingController = main.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController else {
+            return
+        }
+        onboardingController.modalPresentationStyle = .fullScreen
+        present(onboardingController, animated: true, completion: nil)
     }
     
     private func configureView(){
@@ -33,7 +44,9 @@ class PreloaderViewController: UIViewController {
         firstLoadImageView.alpha = 1
         secondLoadImageView.alpha = 0.5
         thirdLoadImageView.alpha = 0.3
-        
+    }
+    
+    private func loadinImages(){
         UIView.animate(withDuration: 1.0, delay: 0.3, options: [.autoreverse, .repeat], animations: {
             self.firstLoadImageView.alpha = 0.0 // скрываем второе изображение
             self.firstLoadImageView.alpha = 1.0 // показываем второе изображение снова
@@ -48,8 +61,5 @@ class PreloaderViewController: UIViewController {
             self.thirdLoadImageView.alpha = 0.0 // скрываем второе изображение
             self.thirdLoadImageView.alpha = 0.3 // показываем второе изображение снова
         }, completion: nil)
-
-        
     }
 }
-
