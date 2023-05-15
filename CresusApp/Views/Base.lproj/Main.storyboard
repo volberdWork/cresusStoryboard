@@ -272,13 +272,17 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PxK-JD-ERQ">
                                 <rect key="frame" x="8" y="123" width="377" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pDG-J3-P5K">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pDG-J3-P5K">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tzs-z4-5Kc" id="s3R-SI-QOS"/>
+                                    <outlet property="delegate" destination="tzs-z4-5Kc" id="jwH-n8-hQw"/>
+                                </connections>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="experienceBoard" translatesAutoresizingMaskIntoConstraints="NO" id="gQf-WS-vnP">
                                 <rect key="frame" x="98.333333333333329" y="59" width="196.33333333333337" height="58"/>
@@ -314,6 +318,9 @@
                             <constraint firstItem="4OQ-kY-AVb" firstAttribute="top" secondItem="lrC-wC-hfe" secondAttribute="top" constant="8" id="zV5-Lh-XdV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="PxK-JD-ERQ" id="N7b-qO-i6p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72M-R7-gE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

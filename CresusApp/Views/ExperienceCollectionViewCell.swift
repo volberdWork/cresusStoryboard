@@ -8,10 +8,14 @@
 import UIKit
 
 class ExperienceCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet var noExperienceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+     
+        noExperienceLabel.text = "Begin your first adventure to get experience"
+        noExperienceLabel.textColor = .white
+        noExperienceLabel.font = UIFont(name: Constants.Fonts.baseFont, size: 26)
     }
 
 }
