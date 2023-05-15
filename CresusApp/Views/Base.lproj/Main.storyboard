@@ -194,19 +194,49 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pjr-Vd-XQu">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7g-e9-khq">
+                                <rect key="frame" x="8" y="135" width="377" height="608.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationImage" translatesAutoresizingMaskIntoConstraints="NO" id="csB-d0-eRP">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="608.66666666666663"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-3L-a4j">
+                                        <rect key="frame" x="45" y="45" width="287" height="518.66666666666663"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="fIe-7g-LK3" id="KOc-VX-2k3"/>
+                                            <outlet property="delegate" destination="fIe-7g-LK3" id="ch1-oi-xo3"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Erp-3L-a4j" secondAttribute="bottom" constant="45" id="1FV-2z-rsF"/>
+                                    <constraint firstAttribute="trailing" secondItem="csB-d0-eRP" secondAttribute="trailing" id="7xS-PP-lth"/>
+                                    <constraint firstItem="Erp-3L-a4j" firstAttribute="leading" secondItem="n7g-e9-khq" secondAttribute="leading" constant="45" id="GVu-HT-epA"/>
+                                    <constraint firstItem="csB-d0-eRP" firstAttribute="leading" secondItem="n7g-e9-khq" secondAttribute="leading" id="NRO-O2-k5P"/>
+                                    <constraint firstAttribute="bottom" secondItem="csB-d0-eRP" secondAttribute="bottom" id="dEz-NJ-Ge6"/>
+                                    <constraint firstItem="Erp-3L-a4j" firstAttribute="top" secondItem="n7g-e9-khq" secondAttribute="top" constant="45" id="kY7-HF-Zzx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Erp-3L-a4j" secondAttribute="trailing" constant="45" id="vm2-Iy-xFO"/>
+                                    <constraint firstItem="csB-d0-eRP" firstAttribute="top" secondItem="n7g-e9-khq" secondAttribute="top" id="xKT-Qj-uCE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dRI-h7-IoU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dRI-h7-IoU" firstAttribute="trailing" secondItem="n7g-e9-khq" secondAttribute="trailing" constant="8" id="2K6-cR-Fmn"/>
                             <constraint firstItem="Pjr-Vd-XQu" firstAttribute="top" secondItem="xCB-d2-LuQ" secondAttribute="top" id="7VI-eE-pZr"/>
+                            <constraint firstItem="n7g-e9-khq" firstAttribute="leading" secondItem="dRI-h7-IoU" secondAttribute="leading" constant="8" id="8RD-el-0nf"/>
                             <constraint firstAttribute="bottom" secondItem="Pjr-Vd-XQu" secondAttribute="bottom" id="Ywn-iN-esD"/>
                             <constraint firstItem="Pjr-Vd-XQu" firstAttribute="leading" secondItem="dRI-h7-IoU" secondAttribute="leading" id="bQF-9l-h2g"/>
+                            <constraint firstItem="n7g-e9-khq" firstAttribute="height" secondItem="Pjr-Vd-XQu" secondAttribute="height" multiplier="1/1.4" id="brL-eR-8LZ"/>
+                            <constraint firstItem="n7g-e9-khq" firstAttribute="top" secondItem="dRI-h7-IoU" secondAttribute="top" constant="32" id="fL0-uB-js3"/>
                             <constraint firstItem="Pjr-Vd-XQu" firstAttribute="trailing" secondItem="dRI-h7-IoU" secondAttribute="trailing" id="jg1-HM-i9u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ecT-wv-eY9">
                         <barButtonItem key="leftBarButtonItem" image="cancelIcon" style="plain" id="lP2-dP-Ruf">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3YI-cS-4sf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3YI-cS-4sf">
                                 <rect key="frame" x="16" y="5.6666666666666679" width="87" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -221,6 +251,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImageView" destination="Pjr-Vd-XQu" id="BPY-Lh-dvD"/>
+                        <outlet property="tablaView" destination="Erp-3L-a4j" id="1Rb-y6-Fae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVG-VL-Jch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

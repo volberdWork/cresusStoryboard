@@ -15,6 +15,8 @@
 		BD4348AA2A0C280700D77377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4348A82A0C280700D77377 /* Main.storyboard */; };
 		BD4348AC2A0C280900D77377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4348AB2A0C280900D77377 /* Assets.xcassets */; };
 		BD4348AF2A0C280900D77377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4348AD2A0C280900D77377 /* LaunchScreen.storyboard */; };
+		BD5F746B2A12BD39005C192A /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F74692A12BD39005C192A /* SettingsTableViewCell.swift */; };
+		BD5F746C2A12BD39005C192A /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5F746A2A12BD39005C192A /* SettingsTableViewCell.xib */; };
 		BD7F43D52A0ECFF900391EFA /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */; };
 		BD7F43D62A0ECFF900391EFA /* LocationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */; };
 		BD7F43D82A0EDEC000391EFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */; };
@@ -36,6 +38,8 @@
 		BD4348AB2A0C280900D77377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD4348AE2A0C280900D77377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD4348B02A0C280900D77377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD5F74692A12BD39005C192A /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		BD5F746A2A12BD39005C192A /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		BD2E95D22A0CF14A007952A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD5F74682A12BD12005C192A /* tableCell */,
 				BD4348A82A0C280700D77377 /* Main.storyboard */,
 				BD2E95D42A0CF746007952A8 /* OnboardingCollectionViewCell.swift */,
 				BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */,
@@ -118,6 +123,15 @@
 				BDA3B8642A0E3401002A1094 /* Resources */,
 			);
 			path = CresusApp;
+			sourceTree = "<group>";
+		};
+		BD5F74682A12BD12005C192A /* tableCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD5F74692A12BD39005C192A /* SettingsTableViewCell.swift */,
+				BD5F746A2A12BD39005C192A /* SettingsTableViewCell.xib */,
+			);
+			path = tableCell;
 			sourceTree = "<group>";
 		};
 		BDA3B8612A0E30F1002A1094 /* Helpers */ = {
@@ -211,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5F746C2A12BD39005C192A /* SettingsTableViewCell.xib in Resources */,
 				BD4348AF2A0C280900D77377 /* LaunchScreen.storyboard in Resources */,
 				BD7F43D62A0ECFF900391EFA /* LocationCollectionViewCell.xib in Resources */,
 				BD4348AC2A0C280900D77377 /* Assets.xcassets in Resources */,
@@ -228,6 +243,7 @@
 			files = (
 				BD7F43D82A0EDEC000391EFA /* DetailViewController.swift in Sources */,
 				BDA3B8692A0E3FB4002A1094 /* MainViewController.swift in Sources */,
+				BD5F746B2A12BD39005C192A /* SettingsTableViewCell.swift in Sources */,
 				BD4348A72A0C280700D77377 /* PreloaderViewController.swift in Sources */,
 				BD7F43D52A0ECFF900391EFA /* LocationCollectionViewCell.swift in Sources */,
 				BDA3B86D2A0E7081002A1094 /* DailyViewController.swift in Sources */,
