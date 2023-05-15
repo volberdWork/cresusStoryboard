@@ -21,6 +21,13 @@ class SettingsViewController: UIViewController {
         tablaView.backgroundColor = .clear
         tablaView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: SettingsTableViewCell.reuseIdentifier)
     }
+    
+    func openexperienceController() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "ExperienceViewController") as? ExperienceViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -29,6 +36,32 @@ class SettingsViewController: UIViewController {
 }
 
 extension SettingsViewController: UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedButton = indexPath.row
+        
+        switch selectedButton {
+        case 0:
+            print("Experience")
+            openexperienceController()
+        case 1:
+            print("Reminders")
+        case 2:
+            print("vibration")
+
+        case 3:
+            print("Sound")
+
+        case 4 :
+            print("Terms")
+
+        case 5 :
+            print("Share App")
+            
+        default:
+            return
+        }
+    }
     
 }
 
