@@ -201,7 +201,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="608.66666666666663"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-3L-a4j">
-                                        <rect key="frame" x="45" y="45" width="287" height="518.66666666666663"/>
+                                        <rect key="frame" x="45" y="55.000000000000028" width="287" height="508.66666666666674"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="fIe-7g-LK3" id="KOc-VX-2k3"/>
@@ -215,7 +215,7 @@
                                     <constraint firstItem="Erp-3L-a4j" firstAttribute="leading" secondItem="n7g-e9-khq" secondAttribute="leading" constant="45" id="GVu-HT-epA"/>
                                     <constraint firstItem="csB-d0-eRP" firstAttribute="leading" secondItem="n7g-e9-khq" secondAttribute="leading" id="NRO-O2-k5P"/>
                                     <constraint firstAttribute="bottom" secondItem="csB-d0-eRP" secondAttribute="bottom" id="dEz-NJ-Ge6"/>
-                                    <constraint firstItem="Erp-3L-a4j" firstAttribute="top" secondItem="n7g-e9-khq" secondAttribute="top" constant="45" id="kY7-HF-Zzx"/>
+                                    <constraint firstItem="Erp-3L-a4j" firstAttribute="top" secondItem="n7g-e9-khq" secondAttribute="top" constant="55" id="kY7-HF-Zzx"/>
                                     <constraint firstAttribute="trailing" secondItem="Erp-3L-a4j" secondAttribute="trailing" constant="45" id="vm2-Iy-xFO"/>
                                     <constraint firstItem="csB-d0-eRP" firstAttribute="top" secondItem="n7g-e9-khq" secondAttribute="top" id="xKT-Qj-uCE"/>
                                 </constraints>
@@ -257,6 +257,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVG-VL-Jch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="487.78625954198469" y="1366.9014084507044"/>
+        </scene>
+        <!--Experience View Controller-->
+        <scene sceneID="fYG-9g-cuP">
+            <objects>
+                <viewController storyboardIdentifier="ExperienceViewController" id="tzs-z4-5Kc" customClass="ExperienceViewController" customModule="CresusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3hW-xI-ORg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="VuY-qY-eMm">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PxK-JD-ERQ">
+                                <rect key="frame" x="8" y="123" width="377" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pDG-J3-P5K">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="experienceBoard" translatesAutoresizingMaskIntoConstraints="NO" id="gQf-WS-vnP">
+                                <rect key="frame" x="98.333333333333329" y="59" width="196.33333333333337" height="58"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OQ-kY-AVb">
+                                <rect key="frame" x="16" y="67" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4h8-er-bgA"/>
+                                    <constraint firstAttribute="width" constant="50" id="fXE-yS-jxf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="cancelIcon"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lrC-wC-hfe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VuY-qY-eMm" secondAttribute="bottom" id="C9r-ql-nbT"/>
+                            <constraint firstItem="4OQ-kY-AVb" firstAttribute="leading" secondItem="lrC-wC-hfe" secondAttribute="leading" constant="16" id="JFq-aX-fMp"/>
+                            <constraint firstItem="VuY-qY-eMm" firstAttribute="leading" secondItem="lrC-wC-hfe" secondAttribute="leading" id="Qe2-Oc-R57"/>
+                            <constraint firstItem="lrC-wC-hfe" firstAttribute="bottom" secondItem="PxK-JD-ERQ" secondAttribute="bottom" constant="16" id="QhA-oH-TIp"/>
+                            <constraint firstItem="PxK-JD-ERQ" firstAttribute="top" secondItem="gQf-WS-vnP" secondAttribute="bottom" constant="6" id="TIU-Kd-3YV"/>
+                            <constraint firstItem="gQf-WS-vnP" firstAttribute="width" secondItem="VuY-qY-eMm" secondAttribute="width" multiplier="0.5" id="YbV-TO-2F4"/>
+                            <constraint firstItem="PxK-JD-ERQ" firstAttribute="leading" secondItem="lrC-wC-hfe" secondAttribute="leading" constant="8" id="bb4-Xr-aQB"/>
+                            <constraint firstItem="VuY-qY-eMm" firstAttribute="top" secondItem="3hW-xI-ORg" secondAttribute="top" id="eJW-mX-rwt"/>
+                            <constraint firstItem="lrC-wC-hfe" firstAttribute="trailing" secondItem="PxK-JD-ERQ" secondAttribute="trailing" constant="8" id="o0V-uV-9Mr"/>
+                            <constraint firstItem="gQf-WS-vnP" firstAttribute="centerX" secondItem="3hW-xI-ORg" secondAttribute="centerX" id="oIR-yx-TTN"/>
+                            <constraint firstItem="VuY-qY-eMm" firstAttribute="trailing" secondItem="lrC-wC-hfe" secondAttribute="trailing" id="t7z-NO-ZzX"/>
+                            <constraint firstItem="PxK-JD-ERQ" firstAttribute="top" secondItem="lrC-wC-hfe" secondAttribute="top" constant="64" id="tvM-vb-a0w"/>
+                            <constraint firstItem="gQf-WS-vnP" firstAttribute="top" secondItem="lrC-wC-hfe" secondAttribute="top" id="uq9-Pw-UbK"/>
+                            <constraint firstItem="4OQ-kY-AVb" firstAttribute="top" secondItem="lrC-wC-hfe" secondAttribute="top" constant="8" id="zV5-Lh-XdV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72M-R7-gE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153.4351145038167" y="1366.9014084507044"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="OMo-gq-oMM">
@@ -601,8 +662,10 @@
         <image name="cresusLogoImage" width="136.66667175292969" height="55.666667938232422"/>
         <image name="dailyImage" width="250.66667175292969" height="69.333335876464844"/>
         <image name="daylilogoImage" width="181.33332824707031" height="62"/>
+        <image name="experienceBoard" width="161.33332824707031" height="55.333332061767578"/>
         <image name="keyCounterImage" width="57.333332061767578" height="34"/>
         <image name="locationImage" width="254" height="390.66665649414062"/>
+        <image name="mainBackImage" width="262" height="568"/>
         <image name="nextButtonImage" width="176" height="56.666667938232422"/>
         <image name="settingsIcon" width="34" height="34"/>
         <image name="zeusPersonImage" width="130" height="216"/>
