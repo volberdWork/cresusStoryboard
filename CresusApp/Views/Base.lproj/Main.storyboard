@@ -326,6 +326,61 @@
             </objects>
             <point key="canvasLocation" x="1153.4351145038167" y="1366.9014084507044"/>
         </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="Ig8-bC-In0">
+            <objects>
+                <viewController storyboardIdentifier="TermsViewController" id="PHr-Xh-K14" customClass="TermsViewController" customModule="CresusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0F2-XD-rsn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="JS9-by-vAA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFz-E7-1Qg">
+                                <rect key="frame" x="8" y="91" width="377" height="695"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationImage" translatesAutoresizingMaskIntoConstraints="NO" id="ntf-XI-mzE">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="695"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mat-mS-UnR">
+                                        <rect key="frame" x="50" y="60" width="277" height="575"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ntf-XI-mzE" secondAttribute="bottom" id="CKo-Ka-5xq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ntf-XI-mzE" secondAttribute="trailing" id="IvN-as-KZI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mat-mS-UnR" secondAttribute="trailing" constant="50" id="RcD-TW-KaL"/>
+                                    <constraint firstItem="Mat-mS-UnR" firstAttribute="leading" secondItem="cFz-E7-1Qg" secondAttribute="leading" constant="50" id="Zrm-Um-BvK"/>
+                                    <constraint firstItem="ntf-XI-mzE" firstAttribute="leading" secondItem="cFz-E7-1Qg" secondAttribute="leading" id="gje-wu-O3l"/>
+                                    <constraint firstItem="ntf-XI-mzE" firstAttribute="top" secondItem="cFz-E7-1Qg" secondAttribute="top" id="lPT-KD-vYc"/>
+                                    <constraint firstItem="Mat-mS-UnR" firstAttribute="top" secondItem="cFz-E7-1Qg" secondAttribute="top" constant="60" id="yR0-ng-iSJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mat-mS-UnR" secondAttribute="bottom" constant="60" id="zvP-rQ-9ln"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d6L-hC-ZD2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d6L-hC-ZD2" firstAttribute="trailing" secondItem="cFz-E7-1Qg" secondAttribute="trailing" constant="8" id="Ach-0T-rld"/>
+                            <constraint firstItem="cFz-E7-1Qg" firstAttribute="leading" secondItem="d6L-hC-ZD2" secondAttribute="leading" constant="8" id="KVs-lF-Pai"/>
+                            <constraint firstItem="JS9-by-vAA" firstAttribute="trailing" secondItem="d6L-hC-ZD2" secondAttribute="trailing" id="RCA-qG-j3a"/>
+                            <constraint firstItem="d6L-hC-ZD2" firstAttribute="bottom" secondItem="cFz-E7-1Qg" secondAttribute="bottom" constant="32" id="UPf-wM-tkN"/>
+                            <constraint firstItem="JS9-by-vAA" firstAttribute="top" secondItem="0F2-XD-rsn" secondAttribute="top" id="jI6-9f-oih"/>
+                            <constraint firstItem="cFz-E7-1Qg" firstAttribute="top" secondItem="d6L-hC-ZD2" secondAttribute="top" constant="32" id="lfq-qI-cgR"/>
+                            <constraint firstAttribute="bottom" secondItem="JS9-by-vAA" secondAttribute="bottom" id="pLk-Sd-ctT"/>
+                            <constraint firstItem="JS9-by-vAA" firstAttribute="leading" secondItem="d6L-hC-ZD2" secondAttribute="leading" id="wLg-Ih-vX6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrZ-5o-dfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.6641221374045" y="1366.9014084507044"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="OMo-gq-oMM">
             <objects>

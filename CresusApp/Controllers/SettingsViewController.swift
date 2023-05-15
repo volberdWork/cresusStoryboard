@@ -29,6 +29,12 @@ class SettingsViewController: UIViewController {
         }
     }
 
+    func openTermsController() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "TermsViewController") as? TermsViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -54,10 +60,17 @@ extension SettingsViewController: UITableViewDelegate{
 
         case 4 :
             print("Terms")
+            openTermsController()
 
         case 5 :
             print("Share App")
-            
+            let textToShare = "Awesome app Estrela"
+            if let urlStr = NSURL(string: "https://apps.apple.com") {
+                let objectsToShare = [textToShare, urlStr] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.popoverPresentationController?.sourceView = self.view
+                self.present(activityVC, animated: true, completion: nil)
+            }
         default:
             return
         }
