@@ -32,5 +32,25 @@ class DetailViewController: UIViewController {
         let locationImage = UIImage(named: data.locationImage)
         locationImageView.image = locationImage
         locationImageView.contentMode = .redraw
+        
+        let attributedText = NSAttributedString(string: "Play", attributes: [NSAttributedString.Key.font: UIFont(name: Constants.Fonts.baseFont, size: 26)])
+        playButton.setAttributedTitle(attributedText, for: .normal)
+        playButton.tintColor = .white
     }
+    
+    private func openLoaderController() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let onboardingController = main.instantiateViewController(withIdentifier: "LoaderViewController") as? LoaderViewController else {
+            return
+        }
+        onboardingController.modalPresentationStyle = .fullScreen
+        present(onboardingController, animated: true, completion: nil)
+    }
+    
+    @IBAction func playButtonPressed(_ sender: UIButton) {
+        openLoaderController()
+    }
+    
+    
+    
 }

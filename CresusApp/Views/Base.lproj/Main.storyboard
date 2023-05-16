@@ -381,6 +381,32 @@
             </objects>
             <point key="canvasLocation" x="1823.6641221374045" y="1366.9014084507044"/>
         </scene>
+        <!--Loader View Controller-->
+        <scene sceneID="pj2-cb-B2X">
+            <objects>
+                <viewController storyboardIdentifier="LoaderViewController" id="LNu-Ip-EXN" customClass="LoaderViewController" customModule="CresusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jGg-jH-MeV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loaderScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="rRY-HK-ShI">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4yy-Uv-1Ru"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rRY-HK-ShI" firstAttribute="top" secondItem="jGg-jH-MeV" secondAttribute="top" id="A7e-3O-XmC"/>
+                            <constraint firstItem="rRY-HK-ShI" firstAttribute="leading" secondItem="4yy-Uv-1Ru" secondAttribute="leading" id="JoU-2H-J1J"/>
+                            <constraint firstItem="rRY-HK-ShI" firstAttribute="trailing" secondItem="4yy-Uv-1Ru" secondAttribute="trailing" id="TQc-qH-gGy"/>
+                            <constraint firstAttribute="bottom" secondItem="rRY-HK-ShI" secondAttribute="bottom" id="xjr-LS-TPP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0n-k1-BLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="1366.9014084507044"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="OMo-gq-oMM">
             <objects>
@@ -683,6 +709,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                     <backgroundConfiguration key="background" image="nextButtonImage"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="kO5-ms-wnA" eventType="touchUpInside" id="BoO-a1-RnG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oiF-4C-sOc"/>
@@ -726,6 +755,7 @@
         <image name="daylilogoImage" width="181.33332824707031" height="62"/>
         <image name="experienceBoard" width="161.33332824707031" height="55.333332061767578"/>
         <image name="keyCounterImage" width="57.333332061767578" height="34"/>
+        <image name="loaderScreenImage" width="262" height="568"/>
         <image name="locationImage" width="254" height="390.66665649414062"/>
         <image name="mainBackImage" width="262" height="568"/>
         <image name="nextButtonImage" width="176" height="56.666667938232422"/>
