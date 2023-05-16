@@ -692,8 +692,11 @@
                                     <constraint firstAttribute="bottom" secondItem="BEd-JH-ZsM" secondAttribute="bottom" id="yGX-gu-zbx"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zeusPersonImage" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-Ig-kvb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zeusPersonImage" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-Ig-kvb">
                                 <rect key="frame" x="0.0" y="511.33333333333326" width="196.66666666666666" height="340.66666666666674"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Ba-Y7-F0T">
+                                <rect key="frame" x="242.33333333333337" y="511.33333333333326" width="150.66666666666663" height="340.66666666666674"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fb-xh-LV7">
                                 <rect key="frame" x="65.666666666666686" y="741" width="262" height="85"/>
@@ -715,6 +718,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VSO-Po-IF8" secondAttribute="bottom" id="2bu-nO-hNV"/>
                             <constraint firstItem="oiF-4C-sOc" firstAttribute="trailing" secondItem="apO-va-zdE" secondAttribute="trailing" constant="8" id="6R2-aR-Yor"/>
+                            <constraint firstItem="3Ba-Y7-F0T" firstAttribute="trailing" secondItem="oiF-4C-sOc" secondAttribute="trailing" id="Bip-uC-kqY"/>
                             <constraint firstItem="7Fb-xh-LV7" firstAttribute="centerX" secondItem="aH5-ER-L3S" secondAttribute="centerX" id="HWd-8O-ECu"/>
                             <constraint firstItem="VSO-Po-IF8" firstAttribute="leading" secondItem="oiF-4C-sOc" secondAttribute="leading" id="Ide-cI-is1"/>
                             <constraint firstItem="7Fb-xh-LV7" firstAttribute="width" secondItem="VSO-Po-IF8" secondAttribute="width" multiplier="1/1.5" id="NsS-8U-KN0"/>
@@ -724,9 +728,12 @@
                             <constraint firstItem="apO-va-zdE" firstAttribute="height" secondItem="VSO-Po-IF8" secondAttribute="height" multiplier="1/1.9" id="fOs-uF-dRQ"/>
                             <constraint firstItem="VSO-Po-IF8" firstAttribute="trailing" secondItem="oiF-4C-sOc" secondAttribute="trailing" id="gHb-tO-iaP"/>
                             <constraint firstItem="bJx-Ig-kvb" firstAttribute="leading" secondItem="oiF-4C-sOc" secondAttribute="leading" id="iVx-H7-GsE"/>
+                            <constraint firstItem="3Ba-Y7-F0T" firstAttribute="width" secondItem="BEd-JH-ZsM" secondAttribute="width" multiplier="0.4" id="jk8-CS-2xY"/>
                             <constraint firstItem="bJx-Ig-kvb" firstAttribute="width" secondItem="VSO-Po-IF8" secondAttribute="width" multiplier="1/2" id="lrx-NS-KHR"/>
                             <constraint firstItem="apO-va-zdE" firstAttribute="leading" secondItem="oiF-4C-sOc" secondAttribute="leading" constant="8" id="n3l-iA-Vcp"/>
+                            <constraint firstAttribute="bottom" secondItem="3Ba-Y7-F0T" secondAttribute="bottom" id="nXS-W7-olF"/>
                             <constraint firstItem="apO-va-zdE" firstAttribute="centerY" secondItem="aH5-ER-L3S" secondAttribute="centerY" id="paH-ei-iiK"/>
+                            <constraint firstItem="3Ba-Y7-F0T" firstAttribute="height" secondItem="VSO-Po-IF8" secondAttribute="height" multiplier="0.4" id="paL-MV-ZIK"/>
                             <constraint firstItem="bJx-Ig-kvb" firstAttribute="height" secondItem="VSO-Po-IF8" secondAttribute="height" multiplier="0.4" id="snD-fh-oM8"/>
                             <constraint firstItem="VSO-Po-IF8" firstAttribute="top" secondItem="aH5-ER-L3S" secondAttribute="top" id="vbz-51-duN"/>
                         </constraints>
@@ -734,9 +741,11 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="VSO-Po-IF8" id="lwr-dw-oNX"/>
                         <outlet property="gameNameLabel" destination="TCC-32-dc4" id="XVy-Rd-FgX"/>
+                        <outlet property="leftPersoneImageView" destination="bJx-Ig-kvb" id="L3g-HR-iMO"/>
                         <outlet property="locationImageView" destination="wf1-ht-3Xy" id="Ezl-1C-3eu"/>
                         <outlet property="overViewLabel" destination="GK1-Dk-UQH" id="hRV-WZ-Q9h"/>
                         <outlet property="playButton" destination="7Fb-xh-LV7" id="6Cq-y2-idr"/>
+                        <outlet property="rightPersonImageView" destination="3Ba-Y7-F0T" id="cp7-lS-XbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSI-lK-se6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

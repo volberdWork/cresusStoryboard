@@ -56,6 +56,12 @@ extension DailyViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RewardsCollectionViewCell", for: indexPath) as! RewardsCollectionViewCell
         
         cell.setupCell(model: rewarsBase[indexPath.row])
+        
+        let openImage = UIImage(named: "openRewardImage")
+        
+        if indexPath.row <= 1{
+            cell.revardsImageView.image = openImage
+        }
         return cell
     }
     
