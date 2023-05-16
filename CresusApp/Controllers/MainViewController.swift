@@ -22,31 +22,31 @@ class MainViewController: UIViewController {
             LocationModel(locationTitle: "Zeus Garden",
                           locationImage: "zeusImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: ""),
+                          personImage: "zeusPersonImage"),
             LocationModel(locationTitle: "The Golden Fleece",
                           locationImage: "goldenImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: ""),
+                          personImage: "aidPersonImage"),
             LocationModel(locationTitle: "Olympus Quest",
                           locationImage: "olympusImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: ""),
+                          personImage: "winePersonImage"),
             LocationModel(locationTitle: "Hades' Inferno",
                           locationImage: "hadesImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: ""),
+                          personImage: "dinPersoneImage"),
             LocationModel(locationTitle: "Odyssey of the Gods",
                           locationImage: "odyseyImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: ""),
+                          personImage: "wariorPersonImage"),
             LocationModel(locationTitle: "Mino's Labyrinth",
                           locationImage: "minosImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: ""),
+                          personImage: "robinPersoneImage"),
             LocationModel(locationTitle: "Sphinx's Riddle",
                           locationImage: "sphynxImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "")
+                          personImage: "lovePersoneImage")
         ]
     }
     
@@ -73,6 +73,7 @@ class MainViewController: UIViewController {
         if let vc = main.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
             navigationController?.pushViewController(vc, animated: true)
             vc.detailGameInfo.append(model)
+            vc.personImage = model.personImage
         }
     }
     

@@ -392,16 +392,48 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loaderScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="rRY-HK-ShI">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImage" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-0f-XIF">
+                                <rect key="frame" x="186.66666666666666" y="766" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="HI4-f9-SEl"/>
+                                    <constraint firstAttribute="height" constant="20" id="XUM-as-1kL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImage" translatesAutoresizingMaskIntoConstraints="NO" id="CRy-bx-yiO">
+                                <rect key="frame" x="158.66666666666666" y="766" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="XKH-gN-b4U"/>
+                                    <constraint firstAttribute="width" constant="20" id="sLN-Sq-h07"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImage" translatesAutoresizingMaskIntoConstraints="NO" id="1AW-sd-Bgf">
+                                <rect key="frame" x="214.66666666666666" y="766" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Zty-sZ-sIH"/>
+                                    <constraint firstAttribute="height" constant="20" id="bJS-AV-Wt9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4yy-Uv-1Ru"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="e9j-0f-XIF" firstAttribute="centerX" secondItem="jGg-jH-MeV" secondAttribute="centerX" id="7xQ-sn-U7A"/>
                             <constraint firstItem="rRY-HK-ShI" firstAttribute="top" secondItem="jGg-jH-MeV" secondAttribute="top" id="A7e-3O-XmC"/>
+                            <constraint firstItem="4yy-Uv-1Ru" firstAttribute="bottom" secondItem="CRy-bx-yiO" secondAttribute="bottom" constant="32" id="Hdn-YK-0n0"/>
                             <constraint firstItem="rRY-HK-ShI" firstAttribute="leading" secondItem="4yy-Uv-1Ru" secondAttribute="leading" id="JoU-2H-J1J"/>
                             <constraint firstItem="rRY-HK-ShI" firstAttribute="trailing" secondItem="4yy-Uv-1Ru" secondAttribute="trailing" id="TQc-qH-gGy"/>
+                            <constraint firstItem="1AW-sd-Bgf" firstAttribute="leading" secondItem="e9j-0f-XIF" secondAttribute="trailing" constant="8" id="eT7-ou-9el"/>
+                            <constraint firstItem="4yy-Uv-1Ru" firstAttribute="bottom" secondItem="1AW-sd-Bgf" secondAttribute="bottom" constant="32" id="gqJ-os-7SA"/>
+                            <constraint firstItem="e9j-0f-XIF" firstAttribute="leading" secondItem="CRy-bx-yiO" secondAttribute="trailing" constant="8" id="pyg-uI-G4B"/>
                             <constraint firstAttribute="bottom" secondItem="rRY-HK-ShI" secondAttribute="bottom" id="xjr-LS-TPP"/>
+                            <constraint firstItem="4yy-Uv-1Ru" firstAttribute="bottom" secondItem="e9j-0f-XIF" secondAttribute="bottom" constant="32" id="yja-1O-0bd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstLoadImageView" destination="CRy-bx-yiO" id="36o-Do-oKe"/>
+                        <outlet property="secondLoadImageView" destination="e9j-0f-XIF" id="jCK-xG-ePh"/>
+                        <outlet property="thirdLoadImageView" destination="1AW-sd-Bgf" id="f5F-0s-pQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0n-k1-BLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -692,7 +724,7 @@
                                     <constraint firstAttribute="bottom" secondItem="BEd-JH-ZsM" secondAttribute="bottom" id="yGX-gu-zbx"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zeusPersonImage" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-Ig-kvb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-Ig-kvb">
                                 <rect key="frame" x="0.0" y="511.33333333333326" width="196.66666666666666" height="340.66666666666674"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Ba-Y7-F0T">
@@ -761,11 +793,11 @@
         <image name="experienceBoard" width="161.33332824707031" height="55.333332061767578"/>
         <image name="keyCounterImage" width="57.333332061767578" height="34"/>
         <image name="loaderScreenImage" width="262" height="568"/>
+        <image name="loadingImage" width="10.666666984558105" height="10.666666984558105"/>
         <image name="locationImage" width="254" height="390.66665649414062"/>
         <image name="mainBackImage" width="262" height="568"/>
         <image name="nextButtonImage" width="176" height="56.666667938232422"/>
         <image name="settingsIcon" width="34" height="34"/>
-        <image name="zeusPersonImage" width="130" height="216"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

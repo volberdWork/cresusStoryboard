@@ -45,13 +45,25 @@ class DetailViewController: UIViewController {
     
     private func checkPersone(){
         switch personImage{
-        case "zeusPersonImage" : print("1")
-        case "winePersonImage" : print("2")
-        case "wariorPersonImage" : print("3")
-        case "robinPersoneImage" : print("4")
-        case "lovePersoneImage" : print("5")
-        case "dinPersoneImage" : print("6")
-        case "aidPersonImage" : print("7")
+        
+        case "zeusPersonImage" :
+            let image = UIImage(named: "zeusPersonImage")
+            leftPersoneImageView.image = image
+        case "winePersonImage" :
+            let image = UIImage(named: "")
+        case "wariorPersonImage" :
+            let image = UIImage(named: "wariorPersonImage")
+            rightPersonImageView.image = image
+        case "robinPersoneImage" :
+            let image = UIImage(named: "")
+        case "lovePersoneImage" :
+            let image = UIImage(named: "")
+        case "dinPersoneImage" :
+            let image = UIImage(named: "dinPersoneImage")
+            leftPersoneImageView.image = image
+        case "aidPersonImage" :
+            let image = UIImage(named: "aidPersonImage")
+            rightPersonImageView.image = image
         default:
             return
         }
