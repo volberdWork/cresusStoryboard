@@ -71,8 +71,8 @@ extension DailyViewController: UICollectionViewDataSource{
 extension DailyViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.size.width / 5
-        let height: CGFloat = 81
+        let width = collectionView.frame.size.width / 10
+        let height = width
         return CGSize(width: width, height: height)
     }
     

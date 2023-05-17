@@ -25,6 +25,8 @@
 		BD5F74792A1400F7005C192A /* RewardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F74772A1400F7005C192A /* RewardsCollectionViewCell.swift */; };
 		BD5F747A2A1400F7005C192A /* RewardsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5F74782A1400F7005C192A /* RewardsCollectionViewCell.xib */; };
 		BD5F747C2A14750C005C192A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F747B2A14750C005C192A /* GameViewController.swift */; };
+		BD5F747F2A14802B005C192A /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F747D2A14802B005C192A /* GameCollectionViewCell.swift */; };
+		BD5F74802A14802B005C192A /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5F747E2A14802B005C192A /* GameCollectionViewCell.xib */; };
 		BD7F43D52A0ECFF900391EFA /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */; };
 		BD7F43D62A0ECFF900391EFA /* LocationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */; };
 		BD7F43D82A0EDEC000391EFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */; };
@@ -56,6 +58,8 @@
 		BD5F74772A1400F7005C192A /* RewardsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD5F74782A1400F7005C192A /* RewardsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD5F747B2A14750C005C192A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BD5F747D2A14802B005C192A /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD5F747E2A14802B005C192A /* GameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				BD5F74702A12CF95005C192A /* ExperienceCollectionViewCell.xib */,
 				BD5F74772A1400F7005C192A /* RewardsCollectionViewCell.swift */,
 				BD5F74782A1400F7005C192A /* RewardsCollectionViewCell.xib */,
+				BD5F747D2A14802B005C192A /* GameCollectionViewCell.swift */,
+				BD5F747E2A14802B005C192A /* GameCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			files = (
 				BD5F746C2A12BD39005C192A /* SettingsTableViewCell.xib in Resources */,
 				BD4348AF2A0C280900D77377 /* LaunchScreen.storyboard in Resources */,
+				BD5F74802A14802B005C192A /* GameCollectionViewCell.xib in Resources */,
 				BD7F43D62A0ECFF900391EFA /* LocationCollectionViewCell.xib in Resources */,
 				BD4348AC2A0C280900D77377 /* Assets.xcassets in Resources */,
 				BD5F74722A12CF95005C192A /* ExperienceCollectionViewCell.xib in Resources */,
@@ -273,6 +280,7 @@
 				BD4348A72A0C280700D77377 /* PreloaderViewController.swift in Sources */,
 				BD5F747C2A14750C005C192A /* GameViewController.swift in Sources */,
 				BD5F74742A12D724005C192A /* TermsViewController.swift in Sources */,
+				BD5F747F2A14802B005C192A /* GameCollectionViewCell.swift in Sources */,
 				BD5F74712A12CF95005C192A /* ExperienceCollectionViewCell.swift in Sources */,
 				BD5F74792A1400F7005C192A /* RewardsCollectionViewCell.swift in Sources */,
 				BD7F43D52A0ECFF900391EFA /* LocationCollectionViewCell.swift in Sources */,

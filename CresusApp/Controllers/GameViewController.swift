@@ -14,13 +14,20 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        registerCell()
+        
+        collectionView.backgroundColor = .clear
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscape
     }
 
+    private func registerCell(){
+        let nibName = UINib(nibName: "GameCollectionViewCell", bundle: nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier: "GameCollectionViewCell")
+    }
 
 }
 
@@ -34,8 +41,23 @@ extension GameViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCollectionViewCell", for: indexPath) as! GameCollectionViewCell
+        
+        cell.gameImageView.image = UIImage(named: gameBase[indexPath.row])
+        
+        return cell
     }
     
+    
+}
+
+
+extension GameViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.size.width / 10
+        
+        return CGSize(width: width, height: width)
+    }
     
 }

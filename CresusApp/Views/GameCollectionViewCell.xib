@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCollectionViewCell" id="gTV-IL-0wX" customClass="GameCollectionViewCell" customModule="CresusApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="112" height="107"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="112" height="107"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DKz-HJ-zVE">
+                        <rect key="frame" x="0.0" y="0.0" width="112" height="107"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="DKz-HJ-zVE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="G4X-P4-tdz"/>
+                <constraint firstItem="DKz-HJ-zVE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dQX-Zq-TTo"/>
+                <constraint firstAttribute="trailing" secondItem="DKz-HJ-zVE" secondAttribute="trailing" id="guQ-f7-1bE"/>
+                <constraint firstAttribute="bottom" secondItem="DKz-HJ-zVE" secondAttribute="bottom" id="wp5-KW-0zQ"/>
+            </constraints>
+            <size key="customSize" width="112" height="107"/>
+            <connections>
+                <outlet property="gameImageView" destination="DKz-HJ-zVE" id="5L3-V4-2n6"/>
+            </connections>
+            <point key="canvasLocation" x="186.25954198473281" y="40.492957746478872"/>
+        </collectionViewCell>
+    </objects>
+</document>
