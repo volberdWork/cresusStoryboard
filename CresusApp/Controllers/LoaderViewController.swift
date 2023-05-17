@@ -14,6 +14,14 @@ class LoaderViewController: UIViewController {
     @IBOutlet var secondLoadImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.9) { // Открываем второй контроллер через 1.5 секунды
+            self.openSecondController()
+        }
+        
+        let loadingImage = UIImage(named: "loadingImage")
+        firstLoadImageView.image = loadingImage
+        secondLoadImageView.image = loadingImage
+        thirdLoadImageView.image = loadingImage
         
         firstLoadImageView.alpha = 1
         secondLoadImageView.alpha = 0.5
@@ -23,6 +31,15 @@ class LoaderViewController: UIViewController {
         
     }
     
+    
+    private func openSecondController() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
+            return
+        }
+        onboardingController.modalPresentationStyle = .fullScreen
+        present(onboardingController, animated: true, completion: nil)
+    }
     
     private func loadinImages(){
         UIView.animate(withDuration: 1.0, delay: 0.3, options: [.autoreverse, .repeat], animations: {
