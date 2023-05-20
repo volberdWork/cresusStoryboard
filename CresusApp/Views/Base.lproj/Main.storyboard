@@ -544,6 +544,13 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="rPm-UX-prE"/>
                                 </constraints>
                             </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wwA-6l-XRj">
+                                <rect key="frame" x="207" y="44" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XKr-aj-mqu"/>
+                                    <constraint firstAttribute="width" constant="150" id="b8W-0i-pdt"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wLu-ev-12o"/>
                         <color key="backgroundColor" red="0.1276005805" green="0.20201116799999999" blue="0.18201071020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -561,12 +568,14 @@
                             <constraint firstItem="uXN-58-otk" firstAttribute="top" secondItem="wsx-es-p2l" secondAttribute="top" id="GQW-3U-r2C"/>
                             <constraint firstItem="7jn-CB-Wti" firstAttribute="bottom" secondItem="wLu-ev-12o" secondAttribute="bottom" id="GSj-Gv-Bfk"/>
                             <constraint firstItem="7jn-CB-Wti" firstAttribute="leading" secondItem="yQa-jt-eEp" secondAttribute="trailing" constant="6" id="KAy-um-Vb0"/>
+                            <constraint firstItem="wwA-6l-XRj" firstAttribute="leading" secondItem="S2b-nZ-dlv" secondAttribute="trailing" constant="81" id="L8W-IS-eGC"/>
                             <constraint firstAttribute="trailing" secondItem="va8-qL-Npx" secondAttribute="trailing" id="LFM-CE-gOp"/>
                             <constraint firstAttribute="bottom" secondItem="uXN-58-otk" secondAttribute="bottom" id="Qjf-by-B4b"/>
                             <constraint firstItem="va8-qL-Npx" firstAttribute="height" secondItem="uXN-58-otk" secondAttribute="height" multiplier="0.4" id="Riz-nV-omC"/>
                             <constraint firstItem="va8-qL-Npx" firstAttribute="leading" secondItem="wsx-es-p2l" secondAttribute="leading" id="SxI-ES-Wq8"/>
                             <constraint firstAttribute="trailing" secondItem="uXN-58-otk" secondAttribute="trailing" id="Uaw-Vc-pAB"/>
                             <constraint firstItem="jp1-3d-X5x" firstAttribute="bottom" secondItem="wLu-ev-12o" secondAttribute="bottom" id="XlH-9O-ZcA"/>
+                            <constraint firstItem="wwA-6l-XRj" firstAttribute="top" secondItem="wLu-ev-12o" secondAttribute="top" constant="44" id="ZPt-5b-lNz"/>
                             <constraint firstItem="Hj7-lG-9Ch" firstAttribute="leading" secondItem="7jn-CB-Wti" secondAttribute="trailing" constant="6" id="aGT-Kb-a3u"/>
                             <constraint firstItem="GB4-K7-LBo" firstAttribute="width" secondItem="uXN-58-otk" secondAttribute="width" multiplier="0.3" id="aKb-sd-gSP"/>
                             <constraint firstItem="yQa-jt-eEp" firstAttribute="bottom" secondItem="wLu-ev-12o" secondAttribute="bottom" id="aSM-Sn-JV9"/>
