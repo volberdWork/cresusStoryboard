@@ -10,6 +10,7 @@ import UIKit
 class GameViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet var timerLabel: UILabel!
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var timeLabel: UILabel!
     var gameBase = ["Image","Image 1","Image 2","Image 3","Image 4","Image 5","Image 6","Image 7","Image 8","Image 9","Image 10","Image 11","Image 12","Image 13","Image 14","Image 15",]
@@ -21,11 +22,18 @@ class GameViewController: UIViewController {
     @IBOutlet var thirdImage: UIImageView!
     @IBOutlet var secondImage: UIImageView!
     
-   
+    @IBOutlet var constrainte: NSLayoutConstraint!
+    @IBOutlet var caentralArrow: UIImageView!
     
-    
+    var isTimerRunning = true
+    var timer = Timer()
+    var time = 60
+    var currenTime = ""
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         selectRandomElements(from: gameBase, into: &randomImages)
         
         configureView()
@@ -33,15 +41,32 @@ class GameViewController: UIViewController {
         registerCell()
         
         collectionView.backgroundColor = .clear
-        scrollToRandomItem(collectionView: collectionView)
+       
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [self] in
+            timerStart()
+            scrollToRandomItem(collectionView: collectionView)
+            constrainte.constant = 0.0
+            
+            
+            caentralArrow.layoutIfNeeded()
+        }
         
         fifthImage.image = UIImage(named: randomImages[0])
         secondImage.image = UIImage(named: randomImages[1])
         thirdImage.image = UIImage(named: randomImages[2])
         forthImage.image = UIImage(named: randomImages[3])
         firstImage.image = UIImage(named: randomImages[4])
-        
          
+    }
+    
+    private func openLossController() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let losevc = main.instantiateViewController(withIdentifier: "LossViewController") as? LossViewController else {
+            return
+        }
+        losevc.modalPresentationStyle = .fullScreen
+        present(losevc, animated: true, completion: nil)
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -74,6 +99,26 @@ class GameViewController: UIViewController {
         }
     }
     
+    private func timerStart() {
+        if self.isTimerRunning {
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                let minutes = self.time / 60 % 60
+                let seconds = self.time % 60
+                self.time -= 1
+                
+                let timeString = String(format: "%01i:%02i", minutes, seconds)
+                self.timerLabel.text = timeString
+                self.currenTime = timeString
+                
+                if self.time == 0 {
+                    timer.invalidate()
+                   self.openLossController()
+                    print("GameLose")
+                }
+            }
+        }
+    }
+
     
     func scrollToRandomItem(collectionView: UICollectionView) {
     
