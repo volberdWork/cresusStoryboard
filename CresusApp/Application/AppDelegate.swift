@@ -57,6 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
+    
+    
     @objc func sendLaunch(app:Any) {
         
         if #available(iOS 14, *) {
