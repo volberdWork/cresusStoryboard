@@ -27,6 +27,11 @@
 		BD5F747C2A14750C005C192A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F747B2A14750C005C192A /* GameViewController.swift */; };
 		BD5F747F2A14802B005C192A /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F747D2A14802B005C192A /* GameCollectionViewCell.swift */; };
 		BD5F74802A14802B005C192A /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5F747E2A14802B005C192A /* GameCollectionViewCell.xib */; };
+		BD7276DD2A1B3E5E0054D8F7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7276DC2A1B3E5E0054D8F7 /* NotificationService.swift */; };
+		BD7276E12A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BD7276DA2A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BD7276E72A1B3F110054D8F7 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = BD7276E62A1B3F110054D8F7 /* OneSignal */; };
+		BD7276E92A1B3F110054D8F7 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = BD7276E82A1B3F110054D8F7 /* OneSignalExtension */; };
+		BD7276ED2A1B40E00054D8F7 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = BD7276EC2A1B40E00054D8F7 /* AppsFlyerLib */; };
 		BD7F43D52A0ECFF900391EFA /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */; };
 		BD7F43D62A0ECFF900391EFA /* LocationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */; };
 		BD7F43D82A0EDEC000391EFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */; };
@@ -37,6 +42,30 @@
 		BDA3B86D2A0E7081002A1094 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */; };
 		BDCC73B62A1AB22B0083DB93 /* LossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC73B52A1AB22B0083DB93 /* LossViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD7276DF2A1B3E5E0054D8F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD4348972A0C280700D77377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD7276D92A1B3E5E0054D8F7;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BD7276C32A1B3BF00054D8F7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BD7276E12A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +90,10 @@
 		BD5F747B2A14750C005C192A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BD5F747D2A14802B005C192A /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD5F747E2A14802B005C192A /* GameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD7276DA2A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7276DC2A1B3E5E0054D8F7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		BD7276DE2A1B3E5E0054D8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7276EA2A1B3F430054D8F7 /* CresusApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CresusApp.entitlements; sourceTree = "<group>"; };
 		BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +107,16 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		BD43489C2A0C280700D77377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7276E72A1B3F110054D8F7 /* OneSignal in Frameworks */,
+				BD7276E92A1B3F110054D8F7 /* OneSignalExtension in Frameworks */,
+				BD7276ED2A1B40E00054D8F7 /* AppsFlyerLib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7276D72A1B3E5E0054D8F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -130,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4348A12A0C280700D77377 /* CresusApp */,
+				BD7276DB2A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension */,
 				BD4348A02A0C280700D77377 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				BD43489F2A0C280700D77377 /* CresusApp.app */,
+				BD7276DA2A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +190,7 @@
 		BD4348A12A0C280700D77377 /* CresusApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD7276EA2A1B3F430054D8F7 /* CresusApp.entitlements */,
 				BDA3B8632A0E33D2002A1094 /* Application */,
 				BDA3B8612A0E30F1002A1094 /* Helpers */,
 				BD2E95D32A0CF151007952A8 /* Controllers */,
@@ -165,6 +211,15 @@
 				BD5F746A2A12BD39005C192A /* SettingsTableViewCell.xib */,
 			);
 			path = tableCell;
+			sourceTree = "<group>";
+		};
+		BD7276DB2A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BD7276DC2A1B3E5E0054D8F7 /* NotificationService.swift */,
+				BD7276DE2A1B3E5E0054D8F7 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		BDA3B8612A0E30F1002A1094 /* Helpers */ = {
@@ -210,15 +265,39 @@
 				BD43489B2A0C280700D77377 /* Sources */,
 				BD43489C2A0C280700D77377 /* Frameworks */,
 				BD43489D2A0C280700D77377 /* Resources */,
+				BD7276C32A1B3BF00054D8F7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD7276E02A1B3E5E0054D8F7 /* PBXTargetDependency */,
+			);
+			name = CresusApp;
+			packageProductDependencies = (
+				BD7276E62A1B3F110054D8F7 /* OneSignal */,
+				BD7276E82A1B3F110054D8F7 /* OneSignalExtension */,
+				BD7276EC2A1B40E00054D8F7 /* AppsFlyerLib */,
+			);
+			productName = CresusApp;
+			productReference = BD43489F2A0C280700D77377 /* CresusApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD7276D92A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD7276E22A1B3E5E0054D8F7 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				BD7276D62A1B3E5E0054D8F7 /* Sources */,
+				BD7276D72A1B3E5E0054D8F7 /* Frameworks */,
+				BD7276D82A1B3E5E0054D8F7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CresusApp;
-			productName = CresusApp;
-			productReference = BD43489F2A0C280700D77377 /* CresusApp.app */;
-			productType = "com.apple.product-type.application";
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = BD7276DA2A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -233,6 +312,9 @@
 					BD43489E2A0C280700D77377 = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					BD7276D92A1B3E5E0054D8F7 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = BD43489A2A0C280700D77377 /* Build configuration list for PBXProject "CresusApp" */;
@@ -244,11 +326,16 @@
 				Base,
 			);
 			mainGroup = BD4348962A0C280700D77377;
+			packageReferences = (
+				BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+				BD7276EB2A1B40E00054D8F7 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			productRefGroup = BD4348A02A0C280700D77377 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BD43489E2A0C280700D77377 /* CresusApp */,
+				BD7276D92A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +354,13 @@
 				BD5F747A2A1400F7005C192A /* RewardsCollectionViewCell.xib in Resources */,
 				BD4348AA2A0C280700D77377 /* Main.storyboard in Resources */,
 				BDA3B8602A0E3001002A1094 /* JockeyOne-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7276D82A1B3E5E0054D8F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +394,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD7276D62A1B3E5E0054D8F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7276DD2A1B3E5E0054D8F7 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD7276E02A1B3E5E0054D8F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD7276D92A1B3E5E0054D8F7 /* OneSignalNotificationServiceExtension */;
+			targetProxy = BD7276DF2A1B3E5E0054D8F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BD4348A82A0C280700D77377 /* Main.storyboard */ = {
@@ -439,11 +549,13 @@
 		BD4348B42A0C280900D77377 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = CresusApp/CresusApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R59JHT6PY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CresusApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -459,6 +571,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Cresus.CresusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,11 +581,13 @@
 		BD4348B52A0C280900D77377 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = CresusApp/CresusApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R59JHT6PY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CresusApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -488,6 +603,57 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Cresus.CresusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD7276E32A1B3E5E0054D8F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R59JHT6PY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Cresus.CresusApp.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD7276E42A1B3E5E0054D8F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R59JHT6PY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Cresus.CresusApp.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,7 +681,53 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BD7276E22A1B3E5E0054D8F7 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7276E32A1B3E5E0054D8F7 /* Debug */,
+				BD7276E42A1B3E5E0054D8F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		BD7276EB2A1B40E00054D8F7 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD7276E62A1B3F110054D8F7 /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+		BD7276E82A1B3F110054D8F7 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+		BD7276EC2A1B40E00054D8F7 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7276EB2A1B40E00054D8F7 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD4348972A0C280700D77377 /* Project object */;
 }

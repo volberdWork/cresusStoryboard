@@ -10,6 +10,7 @@ import UIKit
 class GameViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet var timeProgress: UIProgressView!
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var timeLabel: UILabel!
@@ -29,6 +30,7 @@ class GameViewController: UIViewController {
     var timer = Timer()
     var time = 60
     var currenTime = ""
+    var timeProgressCount: Float = 1.0
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class GameViewController: UIViewController {
             timerStart()
             scrollToRandomItem(collectionView: collectionView)
             constrainte.constant = 0.0
-            
+            timeProgress.progress = 1
             
             caentralArrow.layoutIfNeeded()
         }
@@ -101,10 +103,12 @@ class GameViewController: UIViewController {
     
     private func timerStart() {
         if self.isTimerRunning {
-            self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] timer in
                 let minutes = self.time / 60 % 60
                 let seconds = self.time % 60
                 self.time -= 1
+                self.timeProgressCount -= (1/60)
+                self.timeProgress.progress = timeProgressCount
                 
                 let timeString = String(format: "%01i:%02i", minutes, seconds)
                 self.timerLabel.text = timeString
@@ -140,10 +144,10 @@ class GameViewController: UIViewController {
 
 }
 
-
-
 extension GameViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
 }
 
 extension GameViewController: UICollectionViewDataSource{
