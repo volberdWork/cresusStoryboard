@@ -27,10 +27,6 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-Dv-yL3">
                         <rect key="frame" x="8" y="45" width="272" height="208"/>
                     </imageView>
-                    <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5Q-gn-vDr">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="261"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aj7-uy-Ne2">
                         <rect key="frame" x="76.666666666666686" y="121" width="135" height="80"/>
                         <subviews>
@@ -64,22 +60,17 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="x5s-Dv-yL3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="9Fp-6d-Vyl"/>
-                <constraint firstItem="m5Q-gn-vDr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OpE-cr-MU6"/>
                 <constraint firstItem="Hvz-CI-N2p" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ZQV-N8-3vU"/>
-                <constraint firstAttribute="trailing" secondItem="m5Q-gn-vDr" secondAttribute="trailing" id="bmQ-Sp-Ygp"/>
-                <constraint firstItem="m5Q-gn-vDr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dHV-QO-vax"/>
                 <constraint firstAttribute="trailing" secondItem="x5s-Dv-yL3" secondAttribute="trailing" constant="8" id="fO0-cb-IWj"/>
                 <constraint firstItem="x5s-Dv-yL3" firstAttribute="top" secondItem="Hvz-CI-N2p" secondAttribute="bottom" constant="8" id="g3X-Kt-clr"/>
                 <constraint firstAttribute="bottom" secondItem="Aj7-uy-Ne2" secondAttribute="bottom" constant="60" id="koe-on-NnL"/>
                 <constraint firstItem="Hvz-CI-N2p" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="sNu-Hv-8zS"/>
-                <constraint firstAttribute="bottom" secondItem="m5Q-gn-vDr" secondAttribute="bottom" id="tbR-2i-Em7"/>
                 <constraint firstItem="Aj7-uy-Ne2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xDc-Bf-vCo"/>
                 <constraint firstAttribute="bottom" secondItem="x5s-Dv-yL3" secondAttribute="bottom" constant="8" id="zG5-DZ-B8l"/>
                 <constraint firstAttribute="trailing" secondItem="Hvz-CI-N2p" secondAttribute="trailing" constant="16" id="zTe-Un-h7V"/>
             </constraints>
             <size key="customSize" width="413" height="230"/>
             <connections>
-                <outlet property="darkView" destination="m5Q-gn-vDr" id="YJz-ET-Jmj"/>
                 <outlet property="keyLabel" destination="x7R-je-Lmw" id="eAX-89-Lws"/>
                 <outlet property="keyView" destination="Aj7-uy-Ne2" id="rpo-I9-XVV"/>
                 <outlet property="location" destination="Hvz-CI-N2p" id="P23-Id-Vej"/>

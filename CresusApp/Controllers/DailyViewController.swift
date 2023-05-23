@@ -20,6 +20,12 @@ class DailyViewController: UIViewController {
         print(rewarsBase.count)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     private func configureView(){
         let backImage = UIImage(named: "mainBackImage")
         backgroundImageView.image = backImage
@@ -74,10 +80,21 @@ class DailyViewController: UIViewController {
         
         dailyImageView.image = UIImage(named: "")
     }
+    private func openSecondController() {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
+            return
+        }
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true)
+    }
+    
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        openSecondController()
     }
+    
     
 }
 

@@ -3,8 +3,7 @@ import UIKit
 class LocationCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var location: UILabel!
-    
-    @IBOutlet var darkView: UIView!
+
     @IBOutlet var keyLabel: UILabel!
     @IBOutlet var keyView: UIView!
     @IBOutlet var locationImageView: UIImageView!
@@ -19,8 +18,7 @@ class LocationCollectionViewCell: UICollectionViewCell {
         keyView.isHidden = true
         keyLabel.textColor = .white
         
-        darkView.backgroundColor = .black
-        darkView.alpha = 0.4
+ 
     }
 
     
@@ -30,16 +28,14 @@ class LocationCollectionViewCell: UICollectionViewCell {
         let image = UIImage(named: model.locationImage)
         locationImageView.image = image
         
-        if UserProgressData.keyCount < model.key{
+        if model.key > UserProgressData.keyCount{
+            locationImageView.alpha = 0.3
             keyView.isHidden = false
             keyLabel.text = "\(model.key)"
-            print(UserProgressData.keyCount)
-            print(model.key)
-            darkView.isHidden = false
-        } else{
-            keyView.isHidden = true
-            darkView.isHidden = true
             
+        } else if model.key <= UserProgressData.keyCount{
+            keyView.isHidden = true
+            locationImageView.alpha = 1
         }
     }
 }

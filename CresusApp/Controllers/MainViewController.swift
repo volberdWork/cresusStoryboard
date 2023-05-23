@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserProgressData.keyCount += 4
+        
         
         configureView()
         
@@ -93,6 +93,8 @@ class MainViewController: UIViewController {
     @IBAction func dailyButtonPressed(_ sender: UIButton) {
         
     }
+    
+    
     
     func openDetailController(model: LocationModel) {
         let main = UIStoryboard(name: "Main", bundle: nil)

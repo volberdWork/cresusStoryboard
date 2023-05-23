@@ -19,6 +19,19 @@ class PreloaderViewController: UIViewController {
         }
     }
     
+    func handleFirstAppLaunch() {
+        let isFirstLaunch = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
+        
+        if isFirstLaunch {
+            UserProgressData.keyCount += 4
+            print("Это первый запуск приложения!")
+            
+     
+            UserDefaults.standard.set(true, forKey: "isFirstLaunch")
+        }
+    }
+    
+    
     private func openSecondController() {
         let main = UIStoryboard(name: "Main", bundle: nil)
         guard let onboardingController = main.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController else {
