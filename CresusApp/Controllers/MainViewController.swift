@@ -10,13 +10,16 @@ class MainViewController: UIViewController {
     @IBOutlet var dailyButton: UIButton!
     
     @IBOutlet var keyLabel: UILabel!
-    var keysCount = UserProgressData.keyCount + 4
+    var keysCount = UserProgressData.keyCount
     
     var gameBase: [LocationModel] = []
     
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserProgressData.keyCount += 4
         
         configureView()
         
@@ -27,36 +30,48 @@ class MainViewController: UIViewController {
             LocationModel(locationTitle: "Zeus Garden",
                           locationImage: "zeusImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "zeusPersonImage"),
+                          personImage: "zeusPersonImage",
+                          key: 5),
             LocationModel(locationTitle: "The Golden Fleece",
                           locationImage: "goldenImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "aidPersonImage"),
+                          personImage: "aidPersonImage",
+                          key: 7),
             LocationModel(locationTitle: "Olympus Quest",
                           locationImage: "olympusImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "winePersonImage"),
+                          personImage: "winePersonImage",
+                          key: 9),
             LocationModel(locationTitle: "Hades' Inferno",
                           locationImage: "hadesImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "dinPersoneImage"),
+                          personImage: "dinPersoneImage",
+                          key: 11),
             LocationModel(locationTitle: "Odyssey of the Gods",
                           locationImage: "odyseyImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "wariorPersonImage"),
+                          personImage: "wariorPersonImage",
+                          key: 13),
             LocationModel(locationTitle: "Mino's Labyrinth",
                           locationImage: "minosImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "robinPersoneImage"),
+                          personImage: "robinPersoneImage",
+                          key: 15),
             LocationModel(locationTitle: "Sphinx's Riddle",
                           locationImage: "sphynxImage",
                           overview: "Find all elements and get keys in time to win this adventure. Good luck!",
-                          personImage: "lovePersoneImage")
+                          personImage: "lovePersoneImage",
+                          key: 17)
         ]
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        keyLabel.text = "\(keysCount)"
     }
     
     private func configureView(){

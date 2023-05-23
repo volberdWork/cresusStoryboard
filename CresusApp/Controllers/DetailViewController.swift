@@ -21,6 +21,13 @@ class DetailViewController: UIViewController {
         checkPersone()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    
     private func configureView(){
         let backImage = UIImage(named: "mainBackImage")
         backgroundImageView.image = backImage
@@ -83,5 +90,8 @@ class DetailViewController: UIViewController {
     }
     
     
+    @IBAction func backbuttonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
 }

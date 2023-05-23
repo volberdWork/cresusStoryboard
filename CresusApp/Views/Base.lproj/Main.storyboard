@@ -1218,7 +1218,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wf1-ht-3Xy">
-                                        <rect key="frame" x="77.333333333333329" y="97.000000000000014" width="222.33333333333343" height="162.33333333333337"/>
+                                        <rect key="frame" x="77.333333333333329" y="97.000000000000014" width="222.33333333333337" height="162.33333333333337"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK1-Dk-UQH">
                                         <rect key="frame" x="64" y="275.33333333333331" width="249" height="20.333333333333314"/>
@@ -1265,6 +1265,20 @@
                                     <action selector="playButtonPressed:" destination="kO5-ms-wnA" eventType="touchUpInside" id="BoO-a1-RnG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2c-n7-yXl">
+                                <rect key="frame" x="16" y="59" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="1SN-oB-UoM"/>
+                                    <constraint firstAttribute="width" constant="51" id="I9K-na-CSS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="cancelIcon"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backbuttonPressed:" destination="kO5-ms-wnA" eventType="touchUpInside" id="BKE-t4-TgG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oiF-4C-sOc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1276,6 +1290,7 @@
                             <constraint firstItem="VSO-Po-IF8" firstAttribute="leading" secondItem="oiF-4C-sOc" secondAttribute="leading" id="Ide-cI-is1"/>
                             <constraint firstItem="7Fb-xh-LV7" firstAttribute="width" secondItem="VSO-Po-IF8" secondAttribute="width" multiplier="1/1.5" id="NsS-8U-KN0"/>
                             <constraint firstItem="apO-va-zdE" firstAttribute="centerX" secondItem="aH5-ER-L3S" secondAttribute="centerX" id="PqI-qZ-qRR"/>
+                            <constraint firstItem="B2c-n7-yXl" firstAttribute="leading" secondItem="oiF-4C-sOc" secondAttribute="leading" constant="16" id="R43-rq-Al0"/>
                             <constraint firstAttribute="bottom" secondItem="bJx-Ig-kvb" secondAttribute="bottom" id="amQ-1V-AfK"/>
                             <constraint firstItem="7Fb-xh-LV7" firstAttribute="bottom" secondItem="oiF-4C-sOc" secondAttribute="bottom" constant="8" id="dKq-8a-Rua"/>
                             <constraint firstItem="apO-va-zdE" firstAttribute="height" secondItem="VSO-Po-IF8" secondAttribute="height" multiplier="1/1.5" id="fOs-uF-dRQ"/>
@@ -1284,6 +1299,7 @@
                             <constraint firstItem="3Ba-Y7-F0T" firstAttribute="width" secondItem="BEd-JH-ZsM" secondAttribute="width" multiplier="0.4" id="jk8-CS-2xY"/>
                             <constraint firstItem="bJx-Ig-kvb" firstAttribute="width" secondItem="VSO-Po-IF8" secondAttribute="width" multiplier="1/2" id="lrx-NS-KHR"/>
                             <constraint firstItem="apO-va-zdE" firstAttribute="leading" secondItem="oiF-4C-sOc" secondAttribute="leading" constant="8" id="n3l-iA-Vcp"/>
+                            <constraint firstItem="B2c-n7-yXl" firstAttribute="top" secondItem="oiF-4C-sOc" secondAttribute="top" id="nU6-jE-DqL"/>
                             <constraint firstAttribute="bottom" secondItem="3Ba-Y7-F0T" secondAttribute="bottom" id="nXS-W7-olF"/>
                             <constraint firstItem="apO-va-zdE" firstAttribute="centerY" secondItem="aH5-ER-L3S" secondAttribute="centerY" id="paH-ei-iiK"/>
                             <constraint firstItem="3Ba-Y7-F0T" firstAttribute="height" secondItem="VSO-Po-IF8" secondAttribute="height" multiplier="0.4" id="paL-MV-ZIK"/>
@@ -1309,7 +1325,7 @@
     <resources>
         <image name="cancelIcon" width="34" height="34"/>
         <image name="cresusLogoImage" width="136.66667175292969" height="55.666667938232422"/>
-        <image name="dailyImage 1" width="128" height="128"/>
+        <image name="dailyImage 1" width="250.66667175292969" height="69.333335876464844"/>
         <image name="daylilogoImage" width="181.33332824707031" height="62"/>
         <image name="experienceBoard" width="161.33332824707031" height="55.333332061767578"/>
         <image name="gameBackImage" width="568" height="262"/>

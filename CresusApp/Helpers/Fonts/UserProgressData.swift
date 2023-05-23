@@ -30,16 +30,30 @@ struct UserProgressData {
             UserDefaults.standard.set(newValue, forKey: "winCount")
         }
     }
+    
+    static var lossCount: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "winCount")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "winCount")
+        }
+    }
+    
+    static var winCount: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "winCount")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "winCount")
+        }
+    }
+    
+    
 }
     
-//    static var lossCount: Int {
-//        get {
-//            return UserDefaults.standard.integer(forKey: "lossCount")
-//        }
-//        set {
-//            UserDefaults.standard.set(newValue, forKey: "lossCount")
-//        }
-//    }
+ 
+
 //}
 //
 //// MARK: - Circle Dive Statistic

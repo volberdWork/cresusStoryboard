@@ -47,6 +47,7 @@ class DailyViewController: UIViewController {
         if lastLaunchDate != currentDateString {
             // Сохранить текущую дату в UserDefaults
             userDefaults.set(currentDateString, forKey: "lastLaunchDate")
+            UserProgressData.daysCount = 0
             UserProgressData.daysCount += 1
             
             dailyImageView.image = UIImage(named: "dailyImage")
@@ -96,7 +97,7 @@ extension DailyViewController: UICollectionViewDataSource{
         
         let openImage = UIImage(named: "openRewardImage")
         
-        if indexPath.row <= UserProgressData.daysCount{
+        if indexPath.row < UserProgressData.daysCount-1{
             cell.revardsImageView.image = openImage
         } else{
             cell.revardsImageView.image = UIImage(named: "closwRewardImage")

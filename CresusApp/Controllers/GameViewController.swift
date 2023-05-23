@@ -166,6 +166,7 @@ class GameViewController: UIViewController {
                 if self.time == 0 {
                     timer.invalidate()
                     self.openLossController()
+                    UserProgressData.lossCount += 1
                     print("GameLose")
                 }
             }
@@ -268,6 +269,8 @@ extension GameViewController: UICollectionViewDelegate{
         if keyCounter == 5{
             timer.invalidate()
             openWinController()
+            UserProgressData.keyCount += 1
+            UserProgressData.winCount += 1
         }
         collectionView.reloadData()
         print(keyCounter)
