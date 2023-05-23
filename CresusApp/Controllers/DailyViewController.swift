@@ -5,10 +5,14 @@ class DailyViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var backgroundImageView: UIImageView!
     
+    @IBOutlet var goItButton: UIButton!
+    @IBOutlet var dailyImageView: UIImageView!
+    
     var rewarsBase: [RewardModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        goItButton.isHidden = true
         updateRewardBase()
         configureView()
         registerCell()
@@ -20,10 +24,38 @@ class DailyViewController: UIViewController {
         let backImage = UIImage(named: "mainBackImage")
         backgroundImageView.image = backImage
         backgroundImageView.contentMode = .scaleToFill
-       
+        printHelloOnFirstLaunchOfDay()
         collectionView.backgroundColor = .clear
        
     }
+    
+    func printHelloOnFirstLaunchOfDay() {
+        let userDefaults = UserDefaults.standard
+        
+        // Получить текущую дату
+        let currentDate = Date()
+        
+        // Форматировать текущую дату, чтобы остались только год, месяц и день
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let currentDateString = dateFormatter.string(from: currentDate)
+        
+        // Получить дату последнего запуска из UserDefaults
+        let lastLaunchDate = userDefaults.string(forKey: "lastLaunchDate")
+        
+        // Если дата последнего запуска не совпадает с текущей датой, то это первый запуск за день
+        if lastLaunchDate != currentDateString {
+            // Сохранить текущую дату в UserDefaults
+            userDefaults.set(currentDateString, forKey: "lastLaunchDate")
+            UserProgressData.daysCount += 1
+            
+            dailyImageView.image = UIImage(named: "dailyImage")
+            goItButton.isHidden = false
+            UserProgressData.keyCount += 1
+            print("Hello")
+        }
+    }
+
     
     private func updateRewardBase(){
         for i in 0...99{
@@ -36,7 +68,12 @@ class DailyViewController: UIViewController {
         collectionView.register(nibName, forCellWithReuseIdentifier: "RewardsCollectionViewCell")
     }
     
-
+    @IBAction func goItButtonPressed(_ sender: UIButton) {
+        goItButton.isHidden = true
+        
+        dailyImageView.image = UIImage(named: "")
+    }
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -59,8 +96,10 @@ extension DailyViewController: UICollectionViewDataSource{
         
         let openImage = UIImage(named: "openRewardImage")
         
-        if indexPath.row <= 1{
+        if indexPath.row <= UserProgressData.daysCount{
             cell.revardsImageView.image = openImage
+        } else{
+            cell.revardsImageView.image = UIImage(named: "closwRewardImage")
         }
         return cell
     }

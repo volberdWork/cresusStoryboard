@@ -952,7 +952,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="113.66666666666667"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" image="dailyImage"/>
+                                            <backgroundConfiguration key="background" image="dailyImage 1"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="dailyButtonPressed:" destination="C5c-pG-bP2" eventType="touchUpInside" id="kPq-Si-cwn"/>
@@ -1080,6 +1080,7 @@
                         <outlet property="backgroundImageView" destination="P9A-yR-mqA" id="vee-71-35T"/>
                         <outlet property="collectionView" destination="CHz-BL-rxd" id="9O5-d8-H9q"/>
                         <outlet property="dailyButton" destination="Oik-Tj-DVF" id="QDr-gn-RQz"/>
+                        <outlet property="keyLabel" destination="v4f-u6-p2c" id="EyJ-0O-FLp"/>
                         <outlet property="locationImageView" destination="s4R-qh-1aV" id="bJX-iO-LJU"/>
                     </connections>
                 </viewController>
@@ -1102,7 +1103,7 @@
                                 <rect key="frame" x="0.0" y="135" width="393" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daylilogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-NJ-vA7">
-                                <rect key="frame" x="98.333333333333314" y="59" width="196.33333333333337" height="60"/>
+                                <rect key="frame" x="98.333333333333329" y="59" width="196.33333333333337" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="F0u-Zv-m5o"/>
                                 </constraints>
@@ -1122,25 +1123,48 @@
                                     <outlet property="delegate" destination="eR2-0k-3NZ" id="hGa-v8-Zgh"/>
                                 </connections>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="js3-su-YBQ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSb-ey-Btd">
+                                <rect key="frame" x="78.666666666666671" y="690" width="235.66666666666663" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6ux-oI-Zzr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="goItImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goItButtonPressed:" destination="eR2-0k-3NZ" eventType="touchUpInside" id="Edo-e8-3MD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GyE-lf-cPl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mnj-Wl-gCs" firstAttribute="leading" secondItem="GyE-lf-cPl" secondAttribute="leading" id="2Iu-YL-lw6"/>
+                            <constraint firstItem="JSb-ey-Btd" firstAttribute="width" secondItem="js3-su-YBQ" secondAttribute="width" multiplier="0.6" id="47J-Sl-A11"/>
                             <constraint firstItem="UyY-lC-scO" firstAttribute="leading" secondItem="GyE-lf-cPl" secondAttribute="leading" id="4dl-RL-xLZ"/>
                             <constraint firstItem="GyE-lf-cPl" firstAttribute="bottom" secondItem="mnj-Wl-gCs" secondAttribute="bottom" constant="16" id="7ss-Ir-y8l"/>
                             <constraint firstItem="mnj-Wl-gCs" firstAttribute="top" secondItem="GyE-lf-cPl" secondAttribute="top" constant="32" id="Jmt-uz-wEV"/>
                             <constraint firstItem="GyE-lf-cPl" firstAttribute="trailing" secondItem="NGk-On-eH3" secondAttribute="trailing" constant="50" id="Kp4-5E-znu"/>
+                            <constraint firstAttribute="bottom" secondItem="js3-su-YBQ" secondAttribute="bottom" id="LWH-59-o2L"/>
                             <constraint firstAttribute="bottom" secondItem="UyY-lC-scO" secondAttribute="bottom" id="QVK-5p-Z5e"/>
                             <constraint firstItem="GyE-lf-cPl" firstAttribute="trailing" secondItem="mnj-Wl-gCs" secondAttribute="trailing" id="TC3-Ze-beF"/>
                             <constraint firstItem="UyY-lC-scO" firstAttribute="trailing" secondItem="GyE-lf-cPl" secondAttribute="trailing" id="Urr-Uy-lst"/>
+                            <constraint firstItem="js3-su-YBQ" firstAttribute="top" secondItem="Mks-zS-U4L" secondAttribute="top" id="Xm3-9Q-JdB"/>
+                            <constraint firstItem="js3-su-YBQ" firstAttribute="leading" secondItem="GyE-lf-cPl" secondAttribute="leading" id="YwD-Tl-Jnx"/>
                             <constraint firstItem="NGk-On-eH3" firstAttribute="top" secondItem="DQT-NJ-vA7" secondAttribute="bottom" constant="76" id="ae1-Zr-JjW"/>
                             <constraint firstItem="UyY-lC-scO" firstAttribute="top" secondItem="Mks-zS-U4L" secondAttribute="top" id="f7M-qi-PJa"/>
+                            <constraint firstItem="js3-su-YBQ" firstAttribute="trailing" secondItem="GyE-lf-cPl" secondAttribute="trailing" id="fZs-Dx-rLo"/>
                             <constraint firstItem="DQT-NJ-vA7" firstAttribute="width" secondItem="UyY-lC-scO" secondAttribute="width" multiplier="0.5" id="fsT-e1-cSe"/>
                             <constraint firstItem="mnj-Wl-gCs" firstAttribute="top" secondItem="DQT-NJ-vA7" secondAttribute="bottom" constant="16" id="hEy-Zh-0ot"/>
                             <constraint firstItem="NGk-On-eH3" firstAttribute="leading" secondItem="GyE-lf-cPl" secondAttribute="leading" constant="40" id="hUm-6W-Lub"/>
                             <constraint firstItem="DQT-NJ-vA7" firstAttribute="centerX" secondItem="Mks-zS-U4L" secondAttribute="centerX" id="hYm-Lx-vwJ"/>
+                            <constraint firstItem="GyE-lf-cPl" firstAttribute="bottom" secondItem="JSb-ey-Btd" secondAttribute="bottom" constant="48" id="jUa-74-Pns"/>
                             <constraint firstItem="GyE-lf-cPl" firstAttribute="bottom" secondItem="NGk-On-eH3" secondAttribute="bottom" constant="76" id="jg9-Au-ueC"/>
+                            <constraint firstItem="JSb-ey-Btd" firstAttribute="centerX" secondItem="Mks-zS-U4L" secondAttribute="centerX" id="la7-uD-noR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k9x-Yj-wgF">
@@ -1162,6 +1186,8 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="UyY-lC-scO" id="sZh-Uo-1q5"/>
                         <outlet property="collectionView" destination="NGk-On-eH3" id="vPb-S2-v0K"/>
+                        <outlet property="dailyImageView" destination="js3-su-YBQ" id="Oy8-w2-b7k"/>
+                        <outlet property="goItButton" destination="JSb-ey-Btd" id="t3O-lY-HJ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cG1-ax-TWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1283,10 +1309,11 @@
     <resources>
         <image name="cancelIcon" width="34" height="34"/>
         <image name="cresusLogoImage" width="136.66667175292969" height="55.666667938232422"/>
-        <image name="dailyImage" width="250.66667175292969" height="69.333335876464844"/>
+        <image name="dailyImage 1" width="128" height="128"/>
         <image name="daylilogoImage" width="181.33332824707031" height="62"/>
         <image name="experienceBoard" width="161.33332824707031" height="55.333332061767578"/>
         <image name="gameBackImage" width="568" height="262"/>
+        <image name="goItImage" width="176" height="56.666667938232422"/>
         <image name="homeButton" width="34" height="34"/>
         <image name="keyCounterImage" width="57.333332061767578" height="34"/>
         <image name="keyView" width="1181" height="591"/>

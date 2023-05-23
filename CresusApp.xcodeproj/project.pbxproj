@@ -39,6 +39,7 @@
 		BDA3B86B2A0E5A14002A1094 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B86A2A0E5A14002A1094 /* SettingsViewController.swift */; };
 		BDA3B86D2A0E7081002A1094 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */; };
 		BDBECFAE2A1C076800D745CA /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBECFAD2A1C076800D745CA /* WinViewController.swift */; };
+		BDBECFB02A1C5D8800D745CA /* UserProgressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBECFAF2A1C5D8800D745CA /* UserProgressData.swift */; };
 		BDCC73B62A1AB22B0083DB93 /* LossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC73B52A1AB22B0083DB93 /* LossViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		BDA3B86A2A0E5A14002A1094 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		BDBECFAD2A1C076800D745CA /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		BDBECFAF2A1C5D8800D745CA /* UserProgressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProgressData.swift; sourceTree = "<group>"; };
 		BDCC73B52A1AB22B0083DB93 /* LossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				BDA3B85F2A0E3001002A1094 /* JockeyOne-Regular.ttf */,
+				BDBECFAF2A1C5D8800D745CA /* UserProgressData.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				BD5F746B2A12BD39005C192A /* SettingsTableViewCell.swift in Sources */,
 				BDCC73B62A1AB22B0083DB93 /* LossViewController.swift in Sources */,
 				BD4348A72A0C280700D77377 /* PreloaderViewController.swift in Sources */,
+				BDBECFB02A1C5D8800D745CA /* UserProgressData.swift in Sources */,
 				BD5F747C2A14750C005C192A /* GameViewController.swift in Sources */,
 				BD5F74742A12D724005C192A /* TermsViewController.swift in Sources */,
 				BD5F747F2A14802B005C192A /* GameCollectionViewCell.swift in Sources */,

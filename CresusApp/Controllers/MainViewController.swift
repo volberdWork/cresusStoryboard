@@ -9,10 +9,15 @@ class MainViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var dailyButton: UIButton!
     
+    @IBOutlet var keyLabel: UILabel!
+    var keysCount = UserProgressData.keyCount + 4
+    
     var gameBase: [LocationModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         configureView()
         
         collectionView.register(UINib(nibName: "LocationCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LocationCollectionViewCell")
@@ -66,6 +71,9 @@ class MainViewController: UIViewController {
         let locationImage = UIImage(named: "locationImage")
         locationImageView.image = locationImage
         locationImageView.contentMode = .scaleToFill
+        
+        keyLabel.font = UIFont(name: Constants.Fonts.baseFont, size: 19)
+        keyLabel.text = "\(keysCount)"
     }
     @IBAction func dailyButtonPressed(_ sender: UIButton) {
         
