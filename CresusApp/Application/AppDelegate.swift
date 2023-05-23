@@ -6,34 +6,46 @@
 //
 
 import UIKit
+import AppsFlyerLib
+import OneSignal
+import FirebaseCore
+import AppTrackingTransparency
+
+
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerLibDelegate {
     
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
-//
-//        // OneSignal initialization
-//        OneSignal.initWithLaunchOptions(launchOptions)
-//        OneSignal.setAppId("YOUR_ONESIGNAL_APP_ID")
-//
-//        // promptForPushNotifications will show the native iOS notification permission prompt.
-//        // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 8)
-//        OneSignal.promptForPushNotifications(userResponse: { accepted in
-//            print("User accepted notifications: \(accepted)")
-//        })
         
-//        AppsFlyerLib.shared().appsFlyerDevKey = "devKey"
-//        AppsFlyerLib.shared().appleAppID = "appID"
-//        AppsFlyerLib.shared().isDebug = true
-//        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
-//        AppsFlyerLib.shared().delegate = self
-//
-//        //
-//        NotificationCenter.default.addObserver(self, selector: selector(sendLaunch),name: UIApplication.didBecomeActiveNotification, object: nil)
+        // Remove this method to stop OneSignal Debugging
+         OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+        
+        //Initialization of Firebase
+            FirebaseApp.configure()
+        
+         // OneSignal initialization
+         OneSignal.initWithLaunchOptions(launchOptions)
+         OneSignal.setAppId("aa8bf42e-b22c-48f8-b623-791e907c5ff5")
+         
+         // promptForPushNotifications will show the native iOS notification permission prompt.
+         // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 8)
+         OneSignal.promptForPushNotifications(userResponse: { accepted in
+           print("User accepted notifications: \(accepted)")
+         })
+        
+        //AppsFlyer
+        AppsFlyerLib.shared().appsFlyerDevKey = "zNmvQCCqetKV5cCUH9F6Ra"
+        AppsFlyerLib.shared().appleAppID = "6449358539"
+        AppsFlyerLib.shared().isDebug = true
+        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
+        
+        AppsFlyerLib.shared().delegate = self
+        
+        //
+        NotificationCenter.default.addObserver(self, selector: #selector(sendLaunch),name: UIApplication.didBecomeActiveNotification, object: nil)
         
         return true
         
@@ -53,66 +65,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    
-    
-    
-    
-
-//    @objc func sendLaunch(app:Any) {
-//
-//        if #available(iOS 14, *) {
-//            ATTrackingManager.requestTrackingAuthorization { (status) in
-//                switch status {
-//                case .denied:
-//                    print("AuthorizationSatus is denied")
-//                case .notDetermined:
-//                    print("AuthorizationSatus is notDetermined")
-//                case .restricted:
-//                    print("AuthorizationSatus is restricted")
-//                case .authorized:
-//                    print("AuthorizationSatus is authorized")
-//                @unknown default:
-//                    fatalError("Invalid authorization status")
-//                }
-//            }
-//
-//            AppsFlyerLib.shared().start()
-//        }
-//
-//    }
+    @objc func sendLaunch(app:Any) {
+        
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { (status) in
+                switch status {
+                case .denied:
+                    print("AuthorizationSatus is denied")
+                case .notDetermined:
+                    print("AuthorizationSatus is notDetermined")
+                case .restricted:
+                    print("AuthorizationSatus is restricted")
+                case .authorized:
+                    print("AuthorizationSatus is authorized")
+                @unknown default:
+                    fatalError("Invalid authorization status")
+                }
+            }
+            
+            AppsFlyerLib.shared().start()
+        }
+        
+    }
 }
 
-//    extension AppDelegate {
-//
-//
-//
-//            // Handle Organic/Non-organic installation
-//            func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
-//
-//                    let appsFlyerUID = AppsFlyerLib.shared().getAppsFlyerUID()
-//
-//            print("onConversionDataSuccess data:")
-//                 for (key, value) in data {
-//                    print(key, ":", value)
-//                }
-//
-//                if let status = data["af_status"] as? String {
-//                if (status == "Non-organic") {
-//                        if let sourceID = data["media_source"],
-//                            let campaign = data["campaign"] {
-//                            print("This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
-//                        }
-//
-//                    } else {
-//                        print("This is an organic install.")
-//                    }
-//
-//                }
-//
-//            }
-//
-//            func onConversionDataFail(_ error: Error) {
-//                print("\(error)")
-//            }
-//
-//    }
+extension AppDelegate {
+        
+                
+    
+        // Handle Organic/Non-organic installation
+        func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
+    
+                let appsFlyerUID = AppsFlyerLib.shared().getAppsFlyerUID()
+
+        print("onConversionDataSuccess data:")
+             for (key, value) in data {
+                print(key, ":", value)
+            }
+    
+            if let status = data["af_status"] as? String {
+            if (status == "Non-organic") {
+                    if let sourceID = data["media_source"],
+                        let campaign = data["campaign"] {
+                        print("This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+                    }
+                
+                } else {
+                    print("This is an organic install.")
+                }
+
+            }
+                               
+        }
+    
+        func onConversionDataFail(_ error: Error) {
+            print("\(error)")
+        }
+    
+}
+
+
+    
+
+   
+
+   
