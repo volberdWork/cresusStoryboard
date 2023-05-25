@@ -8,28 +8,29 @@ class PreloaderViewController: UIViewController {
     @IBOutlet var thirdLoadImageView: UIImageView!
     @IBOutlet var secondLoadImageView: UIImageView!
     @IBOutlet var firstLoadImageView: UIImageView!
+    let firstRun = UserDefaults.standard.bool(forKey: "firstRun") as Bool
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        if firstRun {
+            //function you want to run normally
+        } else {
+            runFirst() //will only run once
+        }
+        
+        
         configureView()
         loadinImages()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.9) { // Открываем второй контроллер через 1.5 секунды
             self.openSecondController()
         }
     }
-    
-    func handleFirstAppLaunch() {
-        let isFirstLaunch = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
-        
-        if isFirstLaunch {
-            UserProgressData.keyCount += 4
-            print("Это первый запуск приложения!")
-            
-     
-            UserDefaults.standard.set(true, forKey: "isFirstLaunch")
-        }
+    func runFirst() {
+        print("FIRST RUN!")
+        UserProgressData.keyCount += 4
+        UserDefaults.standard.set(true, forKey: "firstRun")
     }
+    
     
     
     private func openSecondController() {

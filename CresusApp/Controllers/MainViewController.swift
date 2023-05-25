@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        print(keysCount)
         configureView()
         
         collectionView.register(UINib(nibName: "LocationCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LocationCollectionViewCell")
@@ -69,10 +69,10 @@ class MainViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        keyLabel.text = "\(keysCount)"
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        keyLabel.text = "\(keysCount)"
+//    }
     
     private func configureView(){
         let backImage = UIImage(named: "mainBackImage")
@@ -110,8 +110,10 @@ class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        openDetailController(model: gameBase[indexPath.row])
+        if keysCount >= gameBase[indexPath.row].key{
+            openDetailController(model: gameBase[indexPath.row])
+        }
+       
         
     }
 }

@@ -15,28 +15,28 @@ struct UserProgressData {
     
     static var keyCount: Int {
         get {
-            return UserDefaults.standard.integer(forKey: "winCount")
+            return UserDefaults.standard.integer(forKey: "KeyCount")
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "winCount")
+            UserDefaults.standard.set(newValue, forKey: "KeyCount")
         }
     }
     
     static var daysCount: Int {
         get {
-            return UserDefaults.standard.integer(forKey: "winCount")
+            return UserDefaults.standard.integer(forKey: "daysCount")
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "winCount")
+            UserDefaults.standard.set(newValue, forKey: "daysCount")
         }
     }
     
     static var lossCount: Int {
         get {
-            return UserDefaults.standard.integer(forKey: "winCount")
+            return UserDefaults.standard.integer(forKey: "lossCount")
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "winCount")
+            UserDefaults.standard.set(newValue, forKey: "lossCount")
         }
     }
     

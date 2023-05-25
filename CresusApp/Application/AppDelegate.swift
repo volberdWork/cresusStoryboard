@@ -7,10 +7,9 @@
 
 import UIKit
 import AppsFlyerLib
-import OneSignal
 import FirebaseCore
 import AppTrackingTransparency
-
+import OneSignal
 
 
 @main
@@ -21,20 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerLibDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Remove this method to stop OneSignal Debugging
-         OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+          OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+         
+          // OneSignal initialization
+          OneSignal.initWithLaunchOptions(launchOptions)
+          OneSignal.setAppId("aa8bf42e-b22c-48f8-b623-791e907c5ff5")
+          
+          // promptForPushNotifications will show the native iOS notification permission prompt.
+          // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 8)
+          OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+          })
         
         //Initialization of Firebase
-            FirebaseApp.configure()
-        
-         // OneSignal initialization
-         OneSignal.initWithLaunchOptions(launchOptions)
-         OneSignal.setAppId("aa8bf42e-b22c-48f8-b623-791e907c5ff5")
-         
-         // promptForPushNotifications will show the native iOS notification permission prompt.
-         // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 8)
-         OneSignal.promptForPushNotifications(userResponse: { accepted in
-           print("User accepted notifications: \(accepted)")
-         })
+                FirebaseApp.configure()
+    
         
         //AppsFlyer
         AppsFlyerLib.shared().appsFlyerDevKey = "zNmvQCCqetKV5cCUH9F6Ra"

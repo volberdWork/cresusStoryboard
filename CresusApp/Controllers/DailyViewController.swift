@@ -20,12 +20,6 @@ class DailyViewController: UIViewController {
         print(rewarsBase.count)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
     private func configureView(){
         let backImage = UIImage(named: "mainBackImage")
         backgroundImageView.image = backImage
@@ -53,12 +47,14 @@ class DailyViewController: UIViewController {
         if lastLaunchDate != currentDateString {
             // Сохранить текущую дату в UserDefaults
             userDefaults.set(currentDateString, forKey: "lastLaunchDate")
-            UserProgressData.daysCount = 0
+            
             UserProgressData.daysCount += 1
             
             dailyImageView.image = UIImage(named: "dailyImage")
             goItButton.isHidden = false
-            UserProgressData.keyCount += 1
+            UserProgressData.keyCount = UserProgressData.keyCount + 1
+            print("________________________________________________________")
+            print(UserProgressData.keyCount)
             print("Hello")
         }
     }
@@ -114,7 +110,7 @@ extension DailyViewController: UICollectionViewDataSource{
         
         let openImage = UIImage(named: "openRewardImage")
         
-        if indexPath.row < UserProgressData.daysCount-1{
+        if indexPath.row <= UserProgressData.daysCount-1{
             cell.revardsImageView.image = openImage
         } else{
             cell.revardsImageView.image = UIImage(named: "closwRewardImage")

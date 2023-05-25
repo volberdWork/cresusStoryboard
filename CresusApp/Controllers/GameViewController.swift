@@ -10,6 +10,8 @@ import UIKit
 class GameViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet var pauseKeysLabel: UILabel!
+    @IBOutlet var blureView: UIVisualEffectView!
     @IBOutlet var keyProgressView: UIProgressView!
     @IBOutlet var keysLabel: UILabel!
     @IBOutlet var fifthConst: NSLayoutConstraint!
@@ -23,10 +25,13 @@ class GameViewController: UIViewController {
     @IBOutlet var timeLabel: UILabel!
     var incorrectSelected: Int?
     var keyCounter = 0
+    var getKey = 0
+    var levelGameCount = 0
     var gameBase = ["Image","Image 1","Image 2","Image 3","Image 4","Image 5","Image 6","Image 7","Image 8","Image 9","Image 10","Image 11","Image 12","Image 13","Image 14","Image 15",]
     
     var randomImages: [String] = []
     
+    @IBOutlet var pauseView: UIView!
     @IBOutlet var fifthImage: UIImageView!
     @IBOutlet var forthImage: UIImageView!
     @IBOutlet var thirdImage: UIImageView!
@@ -43,26 +48,25 @@ class GameViewController: UIViewController {
     var correctSelected: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        blureView.isHidden = true
         changeConstrainte()
         selectRandomElements(from: gameBase, into: &randomImages)
-        
         configureView()
-        
         registerCell()
-        
         collectionView.backgroundColor = .clear
-        
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
             timerStart()
             scrollToRandomItem(collectionView: collectionView)
             timeProgress.progress = 1
             
             
         }
+        configureBottomCells()
         
+        
+    }
+    
+    private func configureBottomCells(){
         fifthImage.image = UIImage(named: randomImages[4])
         secondImage.image = UIImage(named: randomImages[1])
         thirdImage.image = UIImage(named: randomImages[2])
@@ -72,37 +76,59 @@ class GameViewController: UIViewController {
     }
     
     private func changeConstrainte(){
-        switch keyCounter{
-        case 0 :
+        
+        func first(){
             firstConst.constant = 25.0
             secondConst.constant = 0.0
             thirdConst.constant = 0.0
             forthConst.constant = 0.0
             fifthConst.constant = 0.0
-        case 1 :
+        }
+        
+        func second(){
             firstConst.constant = 0.0
             secondConst.constant = 25
             thirdConst.constant = 0.0
             forthConst.constant = 0.0
             fifthConst.constant = 0.0
-        case 2 :
+        }
+        
+        func third(){
             firstConst.constant = 0.0
             secondConst.constant = 0.0
             thirdConst.constant = 25.0
             forthConst.constant = 0.0
             fifthConst.constant = 0.0
-        case 3 :
+        }
+        
+        func forth(){
             firstConst.constant = 0.0
             secondConst.constant = 0.0
             thirdConst.constant = 0.0
             forthConst.constant = 25.0
             fifthConst.constant = 0.0
-        case 4 :
+        }
+        
+        func fifth(){
             firstConst.constant = 0.0
             secondConst.constant = 0.0
             thirdConst.constant = 0.0
             forthConst.constant = 0.0
             fifthConst.constant = 25.0
+        }
+        
+        
+        switch keyCounter{
+        case 0, 5, 10, 15, 20:
+            first()
+        case 1, 6, 11, 16, 21 :
+            second()
+        case 2, 7, 12, 17, 22 :
+            third()
+        case 3, 8, 13, 18, 23 :
+            forth()
+        case 4 , 9, 14, 19, 24 :
+            fifth()
         default:
             return
         }
@@ -110,12 +136,7 @@ class GameViewController: UIViewController {
     }
     
     private func openLossController() {
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        guard let losevc = main.instantiateViewController(withIdentifier: "LossViewController") as? LossViewController else {
-            return
-        }
-        losevc.modalPresentationStyle = .fullScreen
-        present(losevc, animated: true, completion: nil)
+        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -185,7 +206,6 @@ class GameViewController: UIViewController {
             
             // Скроллим к элементу с помощью метода scrollToItem для текущей коллекции
             collectionView.scrollToItem(at: IndexPath(item: randomIndex, section: 0), at: .centeredHorizontally, animated: true)
-            
         }
         
         // Запускаем таймер для текущей коллекции
@@ -193,25 +213,41 @@ class GameViewController: UIViewController {
     }
     
     private func openWinController() {
+       
+    }
+    
+    @IBAction func pauseButtonPressed(_ sender: UIButton) {
+        blureView.isHidden = false
+        self.timer.invalidate()
+        
+    }
+    
+    @IBAction func pausCacelButtonPress(_ sender: UIButton) {
+        blureView.isHidden = true
+        timerStart()
+        pauseKeysLabel.font = UIFont(name: Constants.Fonts.baseFont, size: 20)
+        pauseKeysLabel.text = "\(getKey)"
+        
+    }
+    
+    @IBAction func homeButtonPressed(_ sender: UIButton) {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
+            return
+        }
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true)
+    }
+    @IBAction func reaperatButtonPressed(_ sender: UIButton) {
         let main = UIStoryboard(name: "Main", bundle: nil)
-        guard let onboardingController = main.instantiateViewController(withIdentifier: "WinViewController") as? WinViewController else {
+        guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
             return
         }
         onboardingController.modalPresentationStyle = .fullScreen
         present(onboardingController, animated: true, completion: nil)
     }
     
-    @IBAction func pauseButtonPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-               let viewController = storyboard.instantiateViewController(withIdentifier: "WinViewController")
-               
-               if let presentationController = viewController.presentationController as? UISheetPresentationController {
-                   presentationController.detents = [.medium()] /// change to [.medium(), .large()] for a half *and* full screen sheet
-               }
-               
-               self.present(viewController, animated: true)
-        
-    }
 }
 
 extension GameViewController: UICollectionViewDelegate{
@@ -219,15 +255,13 @@ extension GameViewController: UICollectionViewDelegate{
         print(indexPath.row)
         if gameBase[indexPath.row] == randomImages[0] && keyCounter == 0{
             keyCounter += 1
-            keyProgressView.progress = 0.2
             correctSelected = indexPath.row
         } else {
             self.incorrectSelected = indexPath.row
             
         }
         
-        if gameBase[indexPath.row] == randomImages[1] && keyCounter == 1{
-            keyProgressView.progress = 0.4
+        if gameBase[indexPath.row] == randomImages[1] && (keyCounter == 1 || keyCounter == 6 || keyCounter == 11 || keyCounter == 16 || keyCounter == 21){
             keyCounter += 1
             correctSelected = indexPath.row
             
@@ -236,41 +270,51 @@ extension GameViewController: UICollectionViewDelegate{
             
         }
         
-        if gameBase[indexPath.row] == randomImages[2] && keyCounter == 2{
+        if gameBase[indexPath.row] == randomImages[2] && (keyCounter == 2 || keyCounter == 7 || keyCounter == 12 || keyCounter == 17 || keyCounter == 22){
             keyCounter += 1
-            keyProgressView.progress = 0.6
             correctSelected = indexPath.row
         } else {
             self.incorrectSelected = indexPath.row
             
         }
         
-        if gameBase[indexPath.row] == randomImages[3] && keyCounter == 3{
+        if gameBase[indexPath.row] == randomImages[3] && (keyCounter == 3 || keyCounter == 8 || keyCounter == 13 || keyCounter == 18 || keyCounter == 23){
             keyCounter += 1
             correctSelected = indexPath.row
-            keyProgressView.progress = 0.8
-        } else {
-            self.incorrectSelected = indexPath.row
-            
         }
-        
-        if gameBase[indexPath.row] == randomImages[4] && keyCounter == 4{
+        if gameBase[indexPath.row] == randomImages[4] && (keyCounter == 4 || keyCounter == 9 || keyCounter == 14 || keyCounter == 19 || keyCounter == 24){
             keyCounter += 1
             correctSelected = indexPath.row
-            keyProgressView.progress = 1
+            keyProgressView.progress = 0
+            getKey += 1
+            UserProgressData.keyCount += 1
+            self.keyProgressView.progress += 0.2
+            self.gameBase.shuffle()
+            self.collectionView.reloadData()
+            
         } else {
             self.incorrectSelected = indexPath.row
-            
         }
-        
+        if gameBase[indexPath.row] == randomImages[0] && (keyCounter == 5 || keyCounter == 10 || keyCounter == 15 || keyCounter == 20 || keyCounter == 25){
+            keyCounter += 1
+            
+            correctSelected = indexPath.row
+        } else {
+            self.incorrectSelected = indexPath.row
+        }
         changeConstrainte()
-        keysLabel.text = "\(keyCounter)/5"
+        keysLabel.text = "\(getKey)/5"
+        
         
         if keyCounter == 5{
-            timer.invalidate()
-            openWinController()
-            UserProgressData.keyCount += 1
+           
+            levelGameCount += 1
+            
+        }
+        
+        if levelGameCount == 5{
             UserProgressData.winCount += 1
+            openWinController()
         }
         collectionView.reloadData()
         print(keyCounter)
@@ -288,7 +332,7 @@ extension GameViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCollectionViewCell", for: indexPath) as! GameCollectionViewCell
         
         
-       
+        
         
         if correctSelected == indexPath.row {
             cell.gameImageView.layer.borderWidth = 8.0
@@ -300,7 +344,7 @@ extension GameViewController: UICollectionViewDataSource{
             cell.gameImageView.layer.borderColor = CGColor(red: 3/255, green: 3/255, blue: 3/255, alpha: 1)
         }
         
-       
+        
         
         
         

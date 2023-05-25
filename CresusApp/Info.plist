@@ -31,5 +31,7 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>Dear user, we use your advertising IDFA to improve the quality of our service.</string>
 </dict>
 </plist>

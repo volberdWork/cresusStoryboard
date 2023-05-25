@@ -27,33 +27,31 @@
 		BD5F747C2A14750C005C192A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F747B2A14750C005C192A /* GameViewController.swift */; };
 		BD5F747F2A14802B005C192A /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F747D2A14802B005C192A /* GameCollectionViewCell.swift */; };
 		BD5F74802A14802B005C192A /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5F747E2A14802B005C192A /* GameCollectionViewCell.xib */; };
-		BD7276E72A1B3F110054D8F7 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = BD7276E62A1B3F110054D8F7 /* OneSignal */; };
-		BD7276E92A1B3F110054D8F7 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = BD7276E82A1B3F110054D8F7 /* OneSignalExtension */; };
 		BD7276ED2A1B40E00054D8F7 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = BD7276EC2A1B40E00054D8F7 /* AppsFlyerLib */; };
 		BD7F43D52A0ECFF900391EFA /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */; };
 		BD7F43D62A0ECFF900391EFA /* LocationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */; };
 		BD7F43D82A0EDEC000391EFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */; };
+		BD9BFBFF2A1DC76E008D9559 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BFBFE2A1DC76E008D9559 /* NotificationService.swift */; };
+		BD9BFC032A1DC76E008D9559 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BD9BFBFC2A1DC76E008D9559 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BD9BFC092A1DC7A8008D9559 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = BD9BFC082A1DC7A8008D9559 /* OneSignal */; };
+		BD9BFC0B2A1DC7A8008D9559 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = BD9BFC0A2A1DC7A8008D9559 /* OneSignalExtension */; };
+		BD9BFC0D2A1DC824008D9559 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD9BFC0C2A1DC824008D9559 /* GoogleService-Info.plist */; };
 		BDA3B8602A0E3001002A1094 /* JockeyOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA3B85F2A0E3001002A1094 /* JockeyOne-Regular.ttf */; };
 		BDA3B8672A0E36DA002A1094 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B8662A0E36DA002A1094 /* Constants.swift */; };
 		BDA3B8692A0E3FB4002A1094 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B8682A0E3FB4002A1094 /* MainViewController.swift */; };
 		BDA3B86B2A0E5A14002A1094 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B86A2A0E5A14002A1094 /* SettingsViewController.swift */; };
 		BDA3B86D2A0E7081002A1094 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */; };
-		BDBECFAE2A1C076800D745CA /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBECFAD2A1C076800D745CA /* WinViewController.swift */; };
 		BDBECFB02A1C5D8800D745CA /* UserProgressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBECFAF2A1C5D8800D745CA /* UserProgressData.swift */; };
-		BDBECFB22A1C94E100D745CA /* GoogleService-Info-58.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDBECFB12A1C94E100D745CA /* GoogleService-Info-58.plist */; };
-		BDBECFBA2A1C96A700D745CA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBECFB92A1C96A700D745CA /* NotificationService.swift */; };
-		BDBECFBE2A1C96A700D745CA /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BDBECFB72A1C96A700D745CA /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BDBECFC42A1C97B500D745CA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BDBECFC32A1C97B500D745CA /* FirebaseAnalytics */; };
 		BDBECFC62A1C97B500D745CA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDBECFC52A1C97B500D745CA /* FirebaseAnalyticsSwift */; };
-		BDCC73B62A1AB22B0083DB93 /* LossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC73B52A1AB22B0083DB93 /* LossViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BDBECFBC2A1C96A700D745CA /* PBXContainerItemProxy */ = {
+		BD9BFC012A1DC76E008D9559 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD4348972A0C280700D77377 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BDBECFB62A1C96A700D745CA;
+			remoteGlobalIDString = BD9BFBFB2A1DC76E008D9559;
 			remoteInfo = OneSignalNotificationServiceExtension;
 		};
 /* End PBXContainerItemProxy section */
@@ -65,7 +63,17 @@
 			dstPath = "Embedded binary's bundle identifier is not prefixed with the parent app's bundle identifier.\ncom.cres3277.app\ncom.cres3277.app\ncom.cres3277.app\ncom.cres3277.app";
 			dstSubfolderSpec = 13;
 			files = (
-				BDBECFBE2A1C96A700D745CA /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD9BFBF42A1DC6E9008D9559 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BD9BFC032A1DC76E008D9559 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,18 +107,16 @@
 		BD7F43D32A0ECFF900391EFA /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD7F43D42A0ECFF900391EFA /* LocationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD7F43D72A0EDEC000391EFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD9BFBFC2A1DC76E008D9559 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9BFBFE2A1DC76E008D9559 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		BD9BFC002A1DC76E008D9559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD9BFC0C2A1DC824008D9559 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDA3B85F2A0E3001002A1094 /* JockeyOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JockeyOne-Regular.ttf"; sourceTree = "<group>"; };
 		BDA3B8662A0E36DA002A1094 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BDA3B8682A0E3FB4002A1094 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BDA3B86A2A0E5A14002A1094 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
-		BDBECFAD2A1C076800D745CA /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		BDBECFAF2A1C5D8800D745CA /* UserProgressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProgressData.swift; sourceTree = "<group>"; };
-		BDBECFB12A1C94E100D745CA /* GoogleService-Info-58.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-58.plist"; sourceTree = "<group>"; };
-		BDBECFB72A1C96A700D745CA /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDBECFB92A1C96A700D745CA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		BDBECFBB2A1C96A700D745CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDCC73B52A1AB22B0083DB93 /* LossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,15 +124,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7276E72A1B3F110054D8F7 /* OneSignal in Frameworks */,
-				BD7276E92A1B3F110054D8F7 /* OneSignalExtension in Frameworks */,
+				BD9BFC0B2A1DC7A8008D9559 /* OneSignalExtension in Frameworks */,
 				BDBECFC42A1C97B500D745CA /* FirebaseAnalytics in Frameworks */,
+				BD9BFC092A1DC7A8008D9559 /* OneSignal in Frameworks */,
 				BD7276ED2A1B40E00054D8F7 /* AppsFlyerLib in Frameworks */,
 				BDBECFC62A1C97B500D745CA /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDBECFB42A1C96A700D745CA /* Frameworks */ = {
+		BD9BFBF92A1DC76E008D9559 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,8 +180,6 @@
 				BD2E95CF2A0C3050007952A8 /* OnboardingViewController.swift */,
 				BDA3B86C2A0E7081002A1094 /* DailyViewController.swift */,
 				BD5F747B2A14750C005C192A /* GameViewController.swift */,
-				BDCC73B52A1AB22B0083DB93 /* LossViewController.swift */,
-				BDBECFAD2A1C076800D745CA /* WinViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4348A12A0C280700D77377 /* CresusApp */,
-				BDBECFB82A1C96A700D745CA /* OneSignalNotificationServiceExtension */,
+				BD9BFBFD2A1DC76E008D9559 /* OneSignalNotificationServiceExtension */,
 				BD4348A02A0C280700D77377 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -193,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				BD43489F2A0C280700D77377 /* CresusApp.app */,
-				BDBECFB72A1C96A700D745CA /* OneSignalNotificationServiceExtension.appex */,
+				BD9BFBFC2A1DC76E008D9559 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,7 +213,7 @@
 				BD2E95D12A0CF143007952A8 /* Models */,
 				BD4348AB2A0C280900D77377 /* Assets.xcassets */,
 				BD4348AD2A0C280900D77377 /* LaunchScreen.storyboard */,
-				BDBECFB12A1C94E100D745CA /* GoogleService-Info-58.plist */,
+				BD9BFC0C2A1DC824008D9559 /* GoogleService-Info.plist */,
 				BD4348B02A0C280900D77377 /* Info.plist */,
 				BDA3B8642A0E3401002A1094 /* Resources */,
 			);
@@ -223,6 +227,15 @@
 				BD5F746A2A12BD39005C192A /* SettingsTableViewCell.xib */,
 			);
 			path = tableCell;
+			sourceTree = "<group>";
+		};
+		BD9BFBFD2A1DC76E008D9559 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BD9BFBFE2A1DC76E008D9559 /* NotificationService.swift */,
+				BD9BFC002A1DC76E008D9559 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		BDA3B8612A0E30F1002A1094 /* Helpers */ = {
@@ -259,15 +272,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		BDBECFB82A1C96A700D745CA /* OneSignalNotificationServiceExtension */ = {
-			isa = PBXGroup;
-			children = (
-				BDBECFB92A1C96A700D745CA /* NotificationService.swift */,
-				BDBECFBB2A1C96A700D745CA /* Info.plist */,
-			);
-			path = OneSignalNotificationServiceExtension;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,31 +283,32 @@
 				BD43489C2A0C280700D77377 /* Frameworks */,
 				BD43489D2A0C280700D77377 /* Resources */,
 				BD7276C32A1B3BF00054D8F7 /* Embed Foundation Extensions */,
+				BD9BFBF42A1DC6E9008D9559 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BDBECFBD2A1C96A700D745CA /* PBXTargetDependency */,
+				BD9BFC022A1DC76E008D9559 /* PBXTargetDependency */,
 			);
 			name = CresusApp;
 			packageProductDependencies = (
-				BD7276E62A1B3F110054D8F7 /* OneSignal */,
-				BD7276E82A1B3F110054D8F7 /* OneSignalExtension */,
 				BD7276EC2A1B40E00054D8F7 /* AppsFlyerLib */,
 				BDBECFC32A1C97B500D745CA /* FirebaseAnalytics */,
 				BDBECFC52A1C97B500D745CA /* FirebaseAnalyticsSwift */,
+				BD9BFC082A1DC7A8008D9559 /* OneSignal */,
+				BD9BFC0A2A1DC7A8008D9559 /* OneSignalExtension */,
 			);
 			productName = CresusApp;
 			productReference = BD43489F2A0C280700D77377 /* CresusApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BDBECFB62A1C96A700D745CA /* OneSignalNotificationServiceExtension */ = {
+		BD9BFBFB2A1DC76E008D9559 /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDBECFBF2A1C96A700D745CA /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildConfigurationList = BD9BFC042A1DC76E008D9559 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				BDBECFB32A1C96A700D745CA /* Sources */,
-				BDBECFB42A1C96A700D745CA /* Frameworks */,
-				BDBECFB52A1C96A700D745CA /* Resources */,
+				BD9BFBF82A1DC76E008D9559 /* Sources */,
+				BD9BFBF92A1DC76E008D9559 /* Frameworks */,
+				BD9BFBFA2A1DC76E008D9559 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -311,7 +316,7 @@
 			);
 			name = OneSignalNotificationServiceExtension;
 			productName = OneSignalNotificationServiceExtension;
-			productReference = BDBECFB72A1C96A700D745CA /* OneSignalNotificationServiceExtension.appex */;
+			productReference = BD9BFBFC2A1DC76E008D9559 /* OneSignalNotificationServiceExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -327,7 +332,7 @@
 					BD43489E2A0C280700D77377 = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					BDBECFB62A1C96A700D745CA = {
+					BD9BFBFB2A1DC76E008D9559 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -342,16 +347,16 @@
 			);
 			mainGroup = BD4348962A0C280700D77377;
 			packageReferences = (
-				BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 				BD7276EB2A1B40E00054D8F7 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
 				BDBECFC22A1C97B500D745CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BD9BFC072A1DC7A8008D9559 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
 			productRefGroup = BD4348A02A0C280700D77377 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BD43489E2A0C280700D77377 /* CresusApp */,
-				BDBECFB62A1C96A700D745CA /* OneSignalNotificationServiceExtension */,
+				BD9BFBFB2A1DC76E008D9559 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -369,12 +374,12 @@
 				BD5F74722A12CF95005C192A /* ExperienceCollectionViewCell.xib in Resources */,
 				BD5F747A2A1400F7005C192A /* RewardsCollectionViewCell.xib in Resources */,
 				BD4348AA2A0C280700D77377 /* Main.storyboard in Resources */,
-				BDBECFB22A1C94E100D745CA /* GoogleService-Info-58.plist in Resources */,
+				BD9BFC0D2A1DC824008D9559 /* GoogleService-Info.plist in Resources */,
 				BDA3B8602A0E3001002A1094 /* JockeyOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDBECFB52A1C96A700D745CA /* Resources */ = {
+		BD9BFBFA2A1DC76E008D9559 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,7 +396,6 @@
 				BD7F43D82A0EDEC000391EFA /* DetailViewController.swift in Sources */,
 				BDA3B8692A0E3FB4002A1094 /* MainViewController.swift in Sources */,
 				BD5F746B2A12BD39005C192A /* SettingsTableViewCell.swift in Sources */,
-				BDCC73B62A1AB22B0083DB93 /* LossViewController.swift in Sources */,
 				BD4348A72A0C280700D77377 /* PreloaderViewController.swift in Sources */,
 				BDBECFB02A1C5D8800D745CA /* UserProgressData.swift in Sources */,
 				BD5F747C2A14750C005C192A /* GameViewController.swift in Sources */,
@@ -407,27 +411,26 @@
 				BD5F74762A12DAAC005C192A /* LoaderViewController.swift in Sources */,
 				BD4348A52A0C280700D77377 /* SceneDelegate.swift in Sources */,
 				BD2E95D02A0C3050007952A8 /* OnboardingViewController.swift in Sources */,
-				BDBECFAE2A1C076800D745CA /* WinViewController.swift in Sources */,
 				BDA3B8672A0E36DA002A1094 /* Constants.swift in Sources */,
 				BDA3B86B2A0E5A14002A1094 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDBECFB32A1C96A700D745CA /* Sources */ = {
+		BD9BFBF82A1DC76E008D9559 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDBECFBA2A1C96A700D745CA /* NotificationService.swift in Sources */,
+				BD9BFBFF2A1DC76E008D9559 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BDBECFBD2A1C96A700D745CA /* PBXTargetDependency */ = {
+		BD9BFC022A1DC76E008D9559 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BDBECFB62A1C96A700D745CA /* OneSignalNotificationServiceExtension */;
-			targetProxy = BDBECFBC2A1C96A700D745CA /* PBXContainerItemProxy */;
+			target = BD9BFBFB2A1DC76E008D9559 /* OneSignalNotificationServiceExtension */;
+			targetProxy = BD9BFC012A1DC76E008D9559 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -631,13 +634,13 @@
 			};
 			name = Release;
 		};
-		BDBECFC02A1C96A700D745CA /* Debug */ = {
+		BD9BFC052A1DC76E008D9559 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R59JHT6PY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
@@ -657,13 +660,13 @@
 			};
 			name = Debug;
 		};
-		BDBECFC12A1C96A700D745CA /* Release */ = {
+		BD9BFC062A1DC76E008D9559 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R59JHT6PY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
@@ -704,11 +707,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDBECFBF2A1C96A700D745CA /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+		BD9BFC042A1DC76E008D9559 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BDBECFC02A1C96A700D745CA /* Debug */,
-				BDBECFC12A1C96A700D745CA /* Release */,
+				BD9BFC052A1DC76E008D9559 /* Debug */,
+				BD9BFC062A1DC76E008D9559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -716,20 +719,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		BD7276EB2A1B40E00054D8F7 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.0.0;
+			};
+		};
+		BD9BFC072A1DC7A8008D9559 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 		BDBECFC22A1C97B500D745CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -743,20 +746,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BD7276E62A1B3F110054D8F7 /* OneSignal */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
-			productName = OneSignal;
-		};
-		BD7276E82A1B3F110054D8F7 /* OneSignalExtension */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD7276E52A1B3F110054D8F7 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
-			productName = OneSignalExtension;
-		};
 		BD7276EC2A1B40E00054D8F7 /* AppsFlyerLib */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD7276EB2A1B40E00054D8F7 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
 			productName = AppsFlyerLib;
+		};
+		BD9BFC082A1DC7A8008D9559 /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD9BFC072A1DC7A8008D9559 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+		BD9BFC0A2A1DC7A8008D9559 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD9BFC072A1DC7A8008D9559 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
 		};
 		BDBECFC32A1C97B500D745CA /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

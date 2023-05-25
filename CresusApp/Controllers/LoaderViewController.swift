@@ -14,10 +14,10 @@ class LoaderViewController: UIViewController {
     @IBOutlet var secondLoadImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.9) { // Открываем второй контроллер через 1.5 секунды
             self.openSecondController()
         }
-        
         let loadingImage = UIImage(named: "loadingImage")
         firstLoadImageView.image = loadingImage
         secondLoadImageView.image = loadingImage
@@ -31,6 +31,7 @@ class LoaderViewController: UIViewController {
         
     }
     
+
     
     private func openSecondController() {
         let main = UIStoryboard(name: "Main", bundle: nil)
