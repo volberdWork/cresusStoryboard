@@ -17,7 +17,6 @@ class ExperienceViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
 }
 
 extension ExperienceViewController: UICollectionViewDelegate{
@@ -27,11 +26,17 @@ extension ExperienceViewController: UICollectionViewDelegate{
 
 extension ExperienceViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExperienceCollectionViewCell", for: indexPath) as! ExperienceCollectionViewCell
+        
+        if indexPath.row == 0{
+            cell.expirienceView.isHidden = false
+            cell.noExperienceLabel.isHidden = true
+            
+        }
         
         return cell
     }
