@@ -10,6 +10,7 @@ import UIKit
 class GameViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet var winView: UIView!
     @IBOutlet var pauseKeysLabel: UILabel!
     @IBOutlet var blureView: UIVisualEffectView!
     @IBOutlet var keyProgressView: UIProgressView!
@@ -23,6 +24,10 @@ class GameViewController: UIViewController {
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var timeLabel: UILabel!
+    
+    @IBOutlet var lossView: UIView!
+    
+    var progresCount: Float = 0.0
     var incorrectSelected: Int?
     var keyCounter = 0
     var getKey = 0
@@ -42,12 +47,15 @@ class GameViewController: UIViewController {
     
     var isTimerRunning = true
     var timer = Timer()
-    var time = 60
+    var time = 120
     var currenTime = ""
     var timeProgressCount: Float = 1.0
     var correctSelected: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+        winView.isHidden = true
+        lossView.isHidden = true
+        pauseView.isHidden = true
         blureView.isHidden = true
         changeConstrainte()
         selectRandomElements(from: gameBase, into: &randomImages)
@@ -137,6 +145,9 @@ class GameViewController: UIViewController {
     
     private func openLossController() {
         
+        blureView.isHidden = false
+        lossView.isHidden = false
+        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -144,6 +155,8 @@ class GameViewController: UIViewController {
     }
     
     private func configureView(){
+        pauseKeysLabel.font = UIFont(name: Constants.Fonts.baseFont, size: 20)
+        
         timeLabel.font = UIFont(name: Constants.Fonts.baseFont, size: 20)
         keysLabel.font = UIFont(name: Constants.Fonts.baseFont, size: 20)
         
@@ -189,6 +202,7 @@ class GameViewController: UIViewController {
                     self.openLossController()
                     UserProgressData.lossCount += 1
                     print("GameLose")
+                   
                 }
             }
         }
@@ -213,20 +227,24 @@ class GameViewController: UIViewController {
     }
     
     private func openWinController() {
-       
+        blureView.isHidden = false
+        winView.isHidden = false
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
         blureView.isHidden = false
+        pauseView.isHidden = false
         self.timer.invalidate()
+        pauseKeysLabel.text = "\(levelGameCount)"
         
     }
     
     @IBAction func pausCacelButtonPress(_ sender: UIButton) {
         blureView.isHidden = true
+        pauseView.isHidden = true
         timerStart()
-        pauseKeysLabel.font = UIFont(name: Constants.Fonts.baseFont, size: 20)
-        pauseKeysLabel.text = "\(getKey)"
+        
+       
         
     }
     
@@ -247,6 +265,51 @@ class GameViewController: UIViewController {
         onboardingController.modalPresentationStyle = .fullScreen
         present(onboardingController, animated: true, completion: nil)
     }
+    @IBAction func nextLvButtonPressed(_ sender: UIButton) {
+        
+        
+    }
+    
+    @IBAction func winHomeButtonPressed(_ sender: UIButton) {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
+            return
+        }
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true)
+    }
+    
+    
+    @IBAction func losRetryButtonPressed(_ sender: UIButton) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
+            return
+        }
+        onboardingController.modalPresentationStyle = .fullScreen
+        present(onboardingController, animated: true, completion: nil)
+    }
+    
+    @IBAction func repeatWinButtonPressed(_ sender: UIButton) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
+            return
+        }
+        onboardingController.modalPresentationStyle = .fullScreen
+        present(onboardingController, animated: true, completion: nil)
+    }
+    
+    @IBAction func lossHomeButtonPressed(_ sender: UIButton) {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
+            return
+        }
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true)
+    }
+    
+    
     
 }
 
@@ -288,7 +351,8 @@ extension GameViewController: UICollectionViewDelegate{
             keyProgressView.progress = 0
             getKey += 1
             UserProgressData.keyCount += 1
-            self.keyProgressView.progress += 0.2
+            self.progresCount += 0.2
+            self.keyProgressView.progress = progresCount
             self.gameBase.shuffle()
             self.collectionView.reloadData()
             
@@ -312,13 +376,16 @@ extension GameViewController: UICollectionViewDelegate{
             
         }
         
-        if levelGameCount == 5{
-            UserProgressData.winCount += 1
+        if keyCounter == 25{
+            
+            UserProgressData.winCount += 5
             openWinController()
         }
         collectionView.reloadData()
         print(keyCounter)
     }
+    
+    
     
     
 }
