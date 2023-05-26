@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AudioToolbox
+import AVFAudio
 
 class GameViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
@@ -23,7 +25,9 @@ class GameViewController: UIViewController {
     @IBOutlet var timeProgress: UIProgressView!
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var firstImage: UIImageView!
+    var audioPlayer = AVAudioPlayer()
     @IBOutlet var timeLabel: UILabel!
+    let playSound = URL(fileURLWithPath: Bundle.main.path(forResource: "tapSound", ofType: "mp3")!)
     
     @IBOutlet var lossView: UIView!
     
@@ -236,6 +240,7 @@ class GameViewController: UIViewController {
         pauseView.isHidden = false
         self.timer.invalidate()
         pauseKeysLabel.text = "\(levelGameCount)"
+        MakeVibration().makeVibration()
         
     }
     
@@ -243,12 +248,14 @@ class GameViewController: UIViewController {
         blureView.isHidden = true
         pauseView.isHidden = true
         timerStart()
+        MakeVibration().makeVibration()
         
        
         
     }
     
     @IBAction func homeButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
             return
         }
@@ -257,7 +264,24 @@ class GameViewController: UIViewController {
         controller.modalTransitionStyle = .flipHorizontal
         present(controller, animated: true)
     }
+    
+    func play(){
+        if UserDefaults.standard.bool(forKey: "sound"){
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: playSound)
+                audioPlayer.play()
+                print("do block")
+            } catch {
+                print("it dosen't work")
+            }
+            print("User works")
+        }else{
+            return
+        }
+    }
+    
     @IBAction func reaperatButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         let main = UIStoryboard(name: "Main", bundle: nil)
         guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
             return
@@ -266,11 +290,18 @@ class GameViewController: UIViewController {
         present(onboardingController, animated: true, completion: nil)
     }
     @IBAction func nextLvButtonPressed(_ sender: UIButton) {
-        
+        MakeVibration().makeVibration()
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
+            return
+        }
+        onboardingController.modalPresentationStyle = .fullScreen
+        present(onboardingController, animated: true, completion: nil)
         
     }
     
     @IBAction func winHomeButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
             return
         }
@@ -282,6 +313,7 @@ class GameViewController: UIViewController {
     
     
     @IBAction func losRetryButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         let main = UIStoryboard(name: "Main", bundle: nil)
         guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
             return
@@ -291,15 +323,18 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func repeatWinButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         let main = UIStoryboard(name: "Main", bundle: nil)
         guard let onboardingController = main.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
             return
         }
         onboardingController.modalPresentationStyle = .fullScreen
         present(onboardingController, animated: true, completion: nil)
+        UserProgressData.keyCount -= 5
     }
     
     @IBAction func lossHomeButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
             return
         }

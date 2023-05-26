@@ -49,6 +49,7 @@ extension SettingsViewController: UITableViewDelegate{
         switch selectedButton {
         case 0:
             print("Experience")
+            MakeVibration().makeVibration()
             openexperienceController()
         case 1:
             print("Reminders")
@@ -61,9 +62,11 @@ extension SettingsViewController: UITableViewDelegate{
         case 4 :
             print("Terms")
             openTermsController()
+            MakeVibration().makeVibration()
 
         case 5 :
             print("Share App")
+            MakeVibration().makeVibration()
             let textToShare = "Awesome app Estrela"
             if let urlStr = NSURL(string: "https://apps.apple.com") {
                 let objectsToShare = [textToShare, urlStr] as [Any]

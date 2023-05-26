@@ -87,11 +87,13 @@ class DetailViewController: UIViewController {
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
         openLoaderController()
+        MakeVibration().makeVibration()
     }
     
     
     @IBAction func backbuttonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+        MakeVibration().makeVibration()
     }
     
 }

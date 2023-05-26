@@ -111,6 +111,7 @@ extension MainViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if keysCount >= gameBase[indexPath.row].key{
+            MakeVibration().makeVibration()
             openDetailController(model: gameBase[indexPath.row])
             UserProgressData.keyCount -= gameBase[indexPath.row].key
         }

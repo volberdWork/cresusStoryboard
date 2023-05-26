@@ -56,6 +56,7 @@ class OnboardingViewController: UIViewController {
         } else{
           openSecondController()
         }
+        MakeVibration().makeVibration()
         
     }
     

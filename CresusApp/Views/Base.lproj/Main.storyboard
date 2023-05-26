@@ -286,25 +286,13 @@
                                 </connections>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="experienceBoard" translatesAutoresizingMaskIntoConstraints="NO" id="gQf-WS-vnP">
-                                <rect key="frame" x="98.333333333333314" y="59" width="196.33333333333337" height="58"/>
+                                <rect key="frame" x="98.333333333333329" y="59" width="196.33333333333337" height="58"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OQ-kY-AVb">
-                                <rect key="frame" x="16" y="67" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4h8-er-bgA"/>
-                                    <constraint firstAttribute="width" constant="50" id="fXE-yS-jxf"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="cancelIcon"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lrC-wC-hfe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VuY-qY-eMm" secondAttribute="bottom" id="C9r-ql-nbT"/>
-                            <constraint firstItem="4OQ-kY-AVb" firstAttribute="leading" secondItem="lrC-wC-hfe" secondAttribute="leading" constant="16" id="JFq-aX-fMp"/>
                             <constraint firstItem="VuY-qY-eMm" firstAttribute="leading" secondItem="lrC-wC-hfe" secondAttribute="leading" id="Qe2-Oc-R57"/>
                             <constraint firstItem="lrC-wC-hfe" firstAttribute="bottom" secondItem="PxK-JD-ERQ" secondAttribute="bottom" constant="16" id="QhA-oH-TIp"/>
                             <constraint firstItem="PxK-JD-ERQ" firstAttribute="top" secondItem="gQf-WS-vnP" secondAttribute="bottom" constant="6" id="TIU-Kd-3YV"/>
@@ -316,9 +304,21 @@
                             <constraint firstItem="VuY-qY-eMm" firstAttribute="trailing" secondItem="lrC-wC-hfe" secondAttribute="trailing" id="t7z-NO-ZzX"/>
                             <constraint firstItem="PxK-JD-ERQ" firstAttribute="top" secondItem="lrC-wC-hfe" secondAttribute="top" constant="64" id="tvM-vb-a0w"/>
                             <constraint firstItem="gQf-WS-vnP" firstAttribute="top" secondItem="lrC-wC-hfe" secondAttribute="top" id="uq9-Pw-UbK"/>
-                            <constraint firstItem="4OQ-kY-AVb" firstAttribute="top" secondItem="lrC-wC-hfe" secondAttribute="top" constant="8" id="zV5-Lh-XdV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ykm-LQ-8cq">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="fDB-RV-I9d">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yCq-th-S7c">
+                                <rect key="frame" x="16" y="0.0" width="87" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cancelIcon"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="tzs-z4-5Kc" eventType="touchUpInside" id="Xa5-2f-6QS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="PxK-JD-ERQ" id="N7b-qO-i6p"/>
                     </connections>

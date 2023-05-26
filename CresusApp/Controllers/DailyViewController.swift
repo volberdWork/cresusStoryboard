@@ -72,6 +72,7 @@ class DailyViewController: UIViewController {
     }
     
     @IBAction func goItButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         goItButton.isHidden = true
         
         dailyImageView.image = UIImage(named: "")
@@ -88,6 +89,7 @@ class DailyViewController: UIViewController {
     
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        MakeVibration().makeVibration()
         openSecondController()
     }
     
