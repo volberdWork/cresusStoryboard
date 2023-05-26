@@ -35,7 +35,9 @@ extension ExperienceViewController: UICollectionViewDataSource{
         if indexPath.row == 0{
             cell.expirienceView.isHidden = false
             cell.noExperienceLabel.isHidden = true
-            
+        } else {
+            cell.expirienceView.isHidden = true
+            cell.noExperienceLabel.isHidden = false
         }
         
         return cell
